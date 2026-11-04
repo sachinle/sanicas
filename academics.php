@@ -24,7 +24,7 @@ $departments = [
         'intro' => 'To provide students with knowledge of human behavior and develop their critical thinking, communication, and interpersonal skills.',
         'courses_label' => 'Course in Department',
         'courses' => ['B.Sc. Psychology'],
-        'hod' => '', 'hod_initials' => '',
+        'hod' => 'Ms. Santhiya M', 'hod_initials' => 'SM',
         'vision' => 'To be a center of excellence in psychology education, research, and practice by nurturing competent, ethical, and compassionate psychologists who promote mental health and contribute to the well-being of individuals and society.',
         'mission' => [
             'To provide high-quality education in psychology through innovative teaching and experiential learning.',
@@ -83,19 +83,18 @@ $faculty = [
     ['Microbiology', [
         ['Dr. Dhanya V', 'Assistant Professor, Head of the Department, IQAC Co-ordinator', 'DV', true],
         ['Dr. Jenifer Jincy T', 'Assistant Professor', 'JJ', false],
-        ['Ms. Preethu P', 'Assistant Professor', 'PP', false],
         ['Mr. Gokul', 'Assistant Professor', 'G', false],
     ]],
     ['Psychology', [
-        ['Ms. Santhiya M', 'Assistant Professor', 'SM', false],
+        ['Ms. Santhiya M', 'Assistant Professor, Head of the Department', 'SM', true],
     ]],
     ['Computer Science & Applications', [
         ['Mrs. Sruthi S', 'Assistant Professor, Head of the Department', 'SS', true],
         ['Mr. Puratchiveeran K', 'Assistant Professor', 'PK', false],
         ['Mrs. Sneha K', 'Assistant Professor', 'SS', false],
-        ['Ms. Sriya S', 'Assistant Professor', 'SS', false],
+       
         ['Ms. Nandini M', 'Assistant Professor', 'NM', false],
-        ['Ms. Vidhya G', 'Assistant Professor', 'VG', false],
+        
         ['Ms. Aparna B', 'Assistant Professor', 'AB', false],
     ]],
     ['Business Administration', [

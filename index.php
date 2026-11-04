@@ -57,7 +57,7 @@ $support = [
                 </span>
                 <span>
                     <span class="overline">Watch</span>
-                    <span class="caption">San Group Of Institution — Walayar, Coimbatore</span>
+                    <span class="caption">San Group Of Institution</span>
                 </span>
             </a>
         </aside>
@@ -137,7 +137,7 @@ $support = [
                 <img src="<?= fig('images/DSC_5685-1-1-1536x1024.jpg') ?>" alt="SANICAS Walayar Campus Aerial View" loading="lazy">
                 <div class="welcome-card__media-badge">
                     <span class="badge-dot"></span>
-                    <span>Walayar Campus &bull; 40+ Acres</span>
+                    <span> 40+ Acres</span>
                 </div>
             </div>
 

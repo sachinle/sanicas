@@ -78,7 +78,7 @@ $amenities = [
     [
         'Green Campus',
         'Growing with Nature',
-        'Spread across a lush, eco-friendly landscape in Walayar with tree-lined walkways, landscaped gardens, and sustainable campus practices.',
+        'Spread across a lush, eco-friendly landscape  with tree-lined walkways, landscaped gardens, and sustainable campus practices.',
         ['40+ Acre Eco Campus', 'Landscaped Gardens', 'Sustainability'],
         'sprout',
         'images (2)/infra and labs/infra_and_labs (12).jpeg',
@@ -198,7 +198,7 @@ $featured = ['https://youtu.be/7Ej46CX5Kgg', 'images/Copy of TWL08690.jpg', 'san
 $videos = [
     ['https://youtu.be/TYzgi98nWJQ', 'life-hero-1.jpeg', 'Freshers Blast 2K25 At San International College of Arts & Sciences, Coimbatore'],
     ['https://youtu.be/wQQSMNCSxhc', 'video-freshers-24.jpg', 'Freshers Blast 2024 | SAN International College of Arts & Science, Coimbatore'],
-    ['https://youtu.be/-HBAFvdLRh0', 'video-natural.jpg', 'San International college of arts and science, walayar Coimbatore — Natural View'],
+    ['https://youtu.be/-HBAFvdLRh0', 'video-natural.jpg', 'San International college of arts and science  — Natural View'],
 ];
 $events = ['images/IMG_3371.JPG.jpeg', 'images/IMG_3372.JPG.jpeg', 'images/PRN06718.JPG', 'images/PRN06755.JPG', 'images/PRN06770.JPG'];
 
