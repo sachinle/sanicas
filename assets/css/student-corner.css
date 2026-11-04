@@ -1,0 +1,39 @@
+/* ==========================================================================
+   STUDENT CORNER
+   ========================================================================== */
+
+.student-hero { min-height: 860px; align-items: center; text-align: center; gap: 26px; padding-bottom: 88px; }
+.student-hero::before {
+    background:
+        linear-gradient(180deg, rgba(18, 19, 16, 0) 30%, rgba(18, 19, 16, .9) 100%),
+        linear-gradient(90deg, rgba(18, 19, 16, .35), rgba(18, 19, 16, .35));
+}
+.chip-row--center { justify-content: center; }
+.chip--link { transition: background-color .2s; }
+.chip--link:hover { background: rgba(245, 241, 232, .28); }
+
+.sc-intro { background: var(--cream); padding: clamp(80px, 9.45vw, 136px) var(--gutter) 48px; }
+.sc-intro__inner { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; align-items: center; text-align: center; }
+
+.sc-programs { background: var(--cream); padding: 0 var(--gutter) clamp(80px, 9.45vw, 136px); }
+.anchor { scroll-margin-top: 110px; display: flex; }
+.anchor > .image-card { flex: 1; }
+.bento-row--7-5 > :first-child { flex: 7 1 0; }
+.bento-row--7-5 > :last-child { flex: 5 1 0; }
+.image-card--tall { gap: 300px; }
+.image-card--wide .image-card__content { max-width: 732px; }
+
+.sc-quote { background: var(--cream); padding: 48px var(--gutter) 120px; }
+.statement-card {
+    background: var(--ochre); border-radius: 40px; padding: 56px clamp(24px, 4.45vw, 64px);
+    display: flex; gap: 32px; align-items: center;
+}
+.statement-card > * { flex: 1; }
+.statement-card .serif { color: var(--ink); }
+.statement-card .body { color: rgba(18, 19, 16, .8); }
+
+@media (max-width: 900px) {
+    .image-card--tall { gap: 180px; }
+    .statement-card { flex-direction: column; align-items: flex-start; }
+    .student-hero { min-height: 720px; }
+}

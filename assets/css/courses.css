@@ -1,0 +1,403 @@
+/* ==========================================================================
+   COURSES
+   ========================================================================== */
+
+.courses-hero { padding: 190px var(--gutter) 112px; display: flex; gap: 64px; align-items: center; }
+.courses-hero__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.courses-hero .lead { color: rgba(245, 241, 232, .8); }
+.count-tiles { display: flex; flex-wrap: wrap; gap: 12px; }
+.count-tile { border-radius: 24px; padding: 16px 26px 16px 22px; display: flex; flex-direction: column; gap: 2px; color: var(--ink); }
+.count-tile strong { font-family: var(--font-display); font-weight: 700; font-size: 52px; line-height: 1.06; letter-spacing: -1.8px; }
+.count-tile span { font-size: 15px; font-weight: 500; line-height: 1.3; color: rgba(18, 19, 16, .75); }
+.count-tile--ochre { background: var(--ochre); }
+.count-tile--cream { background: var(--cream); }
+.count-tile--terra { background: var(--terracotta-soft); }
+.courses-collage { position: relative; width: 480px; height: 500px; flex: none; }
+.courses-collage__single {
+    width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 36px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: block;
+}
+.courses-collage__sticker {
+    position: absolute; right: -20px; top: -20px; width: 124px; height: 124px; border-radius: 50%;
+    background: var(--ochre); color: var(--ink); transform: rotate(-8deg);
+    display: grid; place-items: center; text-align: center; font-size: 14px; font-weight: 700; line-height: 1.25;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+/* Tabs (sticky while browsing departments) */
+.dept-tabs-wrap { background: var(--cream); padding: 48px var(--gutter) 0; position: sticky; top: 0; z-index: 20; }
+.dept-tabs { max-width: 1200px; margin: 0 auto; padding-bottom: 12px; }
+.site-header.is-fixed:not(.is-hidden) ~ main .dept-tabs-wrap { top: 88px; }
+
+/* Departments — Redesigned Department Blocks & Course Decks */
+.ug { padding-top: 72px; }
+.ug .wrap { display: flex; flex-direction: column; gap: 40px; }
+.ug__head { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; padding-bottom: 24px; }
+
+.dept-block {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 36px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    scroll-margin-top: 180px;
+    box-shadow: 0 4px 24px rgba(18, 19, 16, 0.03);
+    transition: box-shadow .3s var(--ease);
+}
+
+.dept-block:hover {
+    box-shadow: 0 16px 48px rgba(18, 19, 16, 0.08);
+}
+
+.dept-block.is-hidden, .pg-card.is-hidden, [data-dept-section].is-hidden {
+    display: none;
+}
+
+/* Cinematic Department Banner */
+.dept-banner {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 220px;
+    padding: clamp(28px, 4vw, 44px);
+    display: flex;
+    align-items: flex-end;
+}
+
+.dept-banner__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .7s var(--ease);
+}
+
+.dept-block:hover .dept-banner__bg {
+    transform: scale(1.03);
+}
+
+.dept-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14, 15, 12, 0.94) 0%, rgba(14, 15, 12, 0.78) 50%, rgba(14, 15, 12, 0.45) 100%);
+    backdrop-filter: blur(2px);
+}
+
+.dept-banner__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--cream);
+    max-width: 700px;
+}
+
+.dept-banner__title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 4px 0 0;
+    color: var(--cream);
+}
+
+.dept-banner__subtitle {
+    font-size: 15px;
+    color: rgba(245, 241, 232, 0.75);
+    margin: 0;
+}
+
+/* Course Deck Grid (3-column layout) */
+.dept-body {
+    width: 100%;
+}
+
+.course-deck {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.course-card-tile {
+    background: var(--cream);
+    border-radius: 22px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 130px;
+    border: 1px solid rgba(18, 19, 16, 0.06);
+    transition: all 0.25s var(--ease);
+    position: relative;
+}
+
+.course-card-tile:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    border-color: rgba(203, 157, 6, 0.4);
+    box-shadow: 0 12px 28px rgba(18, 19, 16, 0.08);
+}
+
+.course-card-tile__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-card-tile__num {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ochre);
+    background: rgba(203, 157, 6, 0.12);
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.04em;
+}
+
+.course-card-tile__icon {
+    color: rgba(18, 19, 16, 0.35);
+    transition: transform 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.course-card-tile__icon .icon {
+    width: 18px;
+    height: 18px;
+}
+
+.course-card-tile:hover .course-card-tile__icon {
+    color: var(--ochre);
+    transform: translate(2px, -2px);
+}
+
+.course-card-tile__name {
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.course-card-tile__dept {
+    font-size: 12px;
+    color: rgba(18, 19, 16, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* Media Creative Deck Layout */
+.media-deck {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.media-deck__main {
+    background: var(--cream);
+    border-radius: 24px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    border: 1px solid rgba(18, 19, 16, 0.06);
+}
+
+.media-deck__badge-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.media-deck__badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 14px;
+    background: rgba(18, 19, 16, 0.08);
+    color: var(--ink);
+}
+
+.media-deck__badge--ochre {
+    background: var(--ochre);
+}
+
+.media-deck__title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+.media-deck__desc {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: rgba(18, 19, 16, 0.75);
+    margin: 0;
+}
+
+.media-deck__careers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid rgba(18, 19, 16, 0.08);
+}
+
+.media-deck__career-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(18, 19, 16, 0.6);
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.media-deck__career-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid rgba(18, 19, 16, 0.08);
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.media-deck__modules {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.media-deck__modules-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(18, 19, 16, 0.55);
+    margin: 0 0 2px 4px;
+}
+
+.media-deck__modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    height: 100%;
+}
+
+.media-module-card {
+    background: var(--cream);
+    border-radius: 18px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    border: 1px solid rgba(18, 19, 16, 0.06);
+    transition: all 0.2s var(--ease);
+}
+
+.media-module-card:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(18, 19, 16, 0.05);
+}
+
+.media-module-card__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(94, 138, 117, 0.15);
+    color: var(--sage);
+    display: grid;
+    place-items: center;
+    flex: none;
+    margin-top: 2px;
+}
+
+.media-module-card__icon .icon {
+    width: 15px;
+    height: 15px;
+}
+
+.media-module-card strong {
+    display: block;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+.media-module-card p {
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: rgba(18, 19, 16, 0.65);
+    margin: 0;
+}
+
+/* Postgraduate */
+.pg { border-radius: var(--r-xl) var(--r-xl) 0 0; }
+.pg .ug__head { padding-bottom: 32px; }
+.pg-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pg-card { border-radius: 32px; padding: 12px 28px 12px 12px; display: flex; gap: 20px; align-items: center; color: var(--ink); scroll-margin-top: 180px; }
+.pg-card img { width: 240px; height: 240px; flex: none; object-fit: cover; object-position: center; border-radius: 24px; }
+.pg-card__text { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.pg-card__text .label { color: rgba(18, 19, 16, .7); }
+.pg-card--ochre { background: var(--ochre); }
+.pg-card--terra { background: var(--terracotta-soft); }
+
+/* Downloads */
+.downloads { background: var(--cream); padding: 96px var(--gutter); }
+.downloads-card {
+    background: var(--ochre); border-radius: 40px; padding: 56px clamp(24px, 4.45vw, 64px);
+    display: flex; align-items: center; justify-content: space-between; gap: 32px;
+}
+.downloads-card__text { width: 620px; max-width: 100%; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.downloads-card__text .serif { color: var(--ink); }
+.downloads-card__text .body { color: rgba(18, 19, 16, .8); }
+.downloads-card__actions { flex: 1; display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+.downloads-card .btn--light .btn__disc { background: var(--ochre); color: var(--ink); }
+
+@media (max-width: 1200px) {
+    .courses-hero { flex-direction: column; align-items: flex-start; }
+    .courses-collage { width: 100%; max-width: 440px; height: 420px; }
+    .courses-collage__sticker { right: -10px; top: -14px; width: 108px; height: 108px; font-size: 13px; }
+    .course-deck { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .media-deck { grid-template-columns: 1fr; }
+    .downloads-card { flex-direction: column; align-items: flex-start; }
+    .downloads-card__actions { justify-content: flex-start; }
+}
+@media (max-width: 900px) {
+    .pg-cards { grid-template-columns: 1fr; }
+    .dept-tabs-wrap { position: static; }
+    .dept-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+}
+@media (max-width: 768px) {
+    .dept-banner { min-height: 180px; padding: 24px; }
+    .dept-banner__title { font-size: 28px; }
+    .course-deck { grid-template-columns: 1fr; }
+    .media-deck__modules-grid { grid-template-columns: 1fr; }
+    .dept-block { border-radius: 28px; padding: 14px; }
+}
+@media (max-width: 640px) {
+    .pg-card { flex-direction: column; align-items: flex-start; padding: 12px 12px 24px; }
+    .pg-card img { width: 100%; height: 220px; }
+    .courses-collage { width: 100%; max-width: 380px; height: 360px; }
+    .courses-collage__sticker { right: -6px; top: -10px; width: 96px; height: 96px; font-size: 12px; }
+    .count-tile strong { font-size: 36px; }
+}

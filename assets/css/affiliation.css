@@ -1,0 +1,56 @@
+/* ==========================================================================
+   AFFILIATION
+   ========================================================================== */
+
+.affil-hero { position: relative; isolation: isolate; background: var(--ink); color: var(--cream); padding: 200px var(--gutter) 120px; overflow: hidden; }
+.affil-hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .28; z-index: -1; }
+.affil-hero__inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 64px; align-items: center; }
+.affil-hero__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.display-xl {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(48px, 6.67vw, 96px); line-height: .95; letter-spacing: -0.036em;
+}
+.display-xl .serif { font-size: 1em; letter-spacing: -0.015em; }
+.terra-text { color: var(--terracotta); }
+
+.cert { position: relative; width: 420px; height: 460px; flex: none; }
+.cert__card {
+    position: absolute; left: 28px; top: 34px; width: 380px; transform: rotate(4deg);
+    background: var(--paper); color: var(--ink); border-radius: 32px; padding: 40px 32px 32px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+    display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;
+    transition: transform .5s var(--ease);
+}
+.cert:hover .cert__card { transform: rotate(0deg); }
+.cert__card img { width: 170px; height: 143px; object-fit: contain; }
+.cert__rule { width: 100%; height: 1px; background: var(--line); }
+.cert__sticker {
+    position: absolute; left: 330px; top: -23px; width: 112px; height: 112px; border-radius: 50%;
+    background: var(--ochre); color: var(--ink); transform: rotate(-12deg);
+    display: grid; place-items: center; text-align: center; font-size: 15px; font-weight: 500; line-height: 1.3;
+}
+
+.bu__row { display: flex; gap: 80px; align-items: flex-start; }
+.seal-card {
+    width: 440px; flex: none; background: var(--paper); border-radius: 40px; padding: 48px 40px 40px;
+    display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center;
+}
+.seal-card img { width: 220px; height: 185px; object-fit: contain; }
+.bu__text { flex: 1; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+
+.recognitions { background: var(--paper); border-radius: var(--r-xl) var(--r-xl) 0 0; }
+.recognitions .section-head { margin-bottom: 64px; }
+.bento-row--5-7 > :first-child { flex: 5 1 0; }
+.bento-row--5-7 > :last-child { flex: 7 1 0; }
+
+@media (max-width: 1080px) {
+    .affil-hero__inner { flex-direction: column; align-items: flex-start; }
+    .bu__row { flex-direction: column; gap: 40px; }
+    .seal-card { width: 100%; max-width: 440px; }
+}
+@media (max-width: 640px) {
+    .affil-hero { padding-top: 150px; }
+    .cert { width: 100%; max-width: 340px; height: 400px; }
+    .cert__card { left: 0; width: 100%; padding: 32px 20px 24px; }
+    .cert__sticker { left: auto; right: -8px; width: 96px; height: 96px; font-size: 13px; }
+}

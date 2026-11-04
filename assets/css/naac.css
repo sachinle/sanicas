@@ -1,0 +1,52 @@
+/* ==========================================================================
+   NAAC  (Figma: "NAAC — Desktop 1440")
+   ========================================================================== */
+
+.naac-hero {
+    background: var(--ink);
+    color: var(--cream);
+    min-height: 457px;
+    padding: 200px var(--gutter) 110px;
+}
+.naac-hero__text {
+    max-width: calc(var(--maxw) - 2 * 120px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+}
+.naac-hero__title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(64px, 6.67vw, 96px);
+    line-height: .95;
+    letter-spacing: -0.036em;
+    color: var(--ochre);
+}
+
+.naac-body {
+    background: var(--cream);
+    padding: clamp(64px, 8.34vw, 120px) var(--gutter);
+}
+.naac-placeholder {
+    max-width: calc(var(--maxw) - 2 * 120px);
+    margin: 0 auto;
+    min-height: 480px;
+    border-radius: 36px;
+    border: 1.5px dashed rgba(117, 119, 112, .5);
+    background: rgba(255, 255, 255, .6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .naac-hero { min-height: 0; padding: 150px 20px 72px; }
+    .naac-hero .chip { white-space: normal; }
+    .naac-placeholder { min-height: 320px; border-radius: 28px; }
+}

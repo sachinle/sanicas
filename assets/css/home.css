@@ -1,0 +1,1256 @@
+/* ==========================================================================
+   HOME
+   ========================================================================== */
+
+/* Hero recognition glass card */
+.recognition-card {
+    width: 360px;
+    flex: none;
+    padding: 10px 24px;
+    border-radius: var(--r-lg);
+    background: rgba(245, 241, 232, .1);
+    border: 1px solid rgba(245, 241, 232, .2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.recognition-card__row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(245, 241, 232, .14);
+}
+
+.recognition-card__row:nth-child(3) {
+    border-bottom: 0;
+}
+
+.recognition-card__row .overline {
+    color: rgba(245, 241, 232, .6);
+}
+
+.recognition-card__row .num.overline {
+    color: var(--ochre);
+}
+
+.recognition-card .label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-top: 2px;
+}
+
+.video-chip {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 0 6px;
+}
+
+.video-chip__thumb {
+    position: relative;
+    width: 96px;
+    height: 58px;
+    flex: none;
+    border-radius: 14px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.video-chip__thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-disc {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--ochre);
+    color: var(--ink);
+    display: grid;
+    place-items: center;
+    transition: transform .3s var(--ease);
+}
+
+.play-disc .icon {
+    width: 11px;
+    height: 11px;
+    margin-left: 1px;
+}
+
+.video-chip:hover .play-disc {
+    transform: scale(1.15);
+}
+
+.video-chip .overline {
+    display: block;
+    color: var(--ochre);
+}
+
+.video-chip .caption {
+    display: block;
+    color: var(--cream);
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   Welcome Section (Center-aligned, Professional Design, Default Colors)
+   ========================================================================== */
+.welcome {
+    position: relative;
+    padding-top: clamp(64px, 7vw, 100px);
+    padding-bottom: clamp(64px, 7vw, 100px);
+}
+
+.welcome__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(28px, 3.2vw, 44px);
+    max-width: calc(var(--maxw) - 2 * 120px);
+    margin: 0 auto;
+}
+
+/* Institutional Eyebrow & Accreditations (Centered) */
+.welcome__header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.welcome__accreditations {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 4px;
+}
+
+.welcome__accreditation-dot {
+    color: var(--ochre);
+    font-weight: 700;
+}
+
+/* Commanding Headline Statement (Centered) */
+.welcome__statement {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 3.8vw, 50px);
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    text-align: center;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.welcome__statement .text-accent {
+    display: inline;
+    position: relative;
+    font-weight: 700;
+}
+
+.welcome__statement .text-accent--ochre {
+    color: var(--ochre);
+}
+
+.welcome__statement .text-accent--terra {
+    color: var(--terracotta);
+}
+
+/* Narrative (Centered) */
+.welcome__narrative {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome__lead {
+    font-size: clamp(17px, 1.35vw, 19.5px);
+    line-height: 1.65;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.welcome__subtext {
+    font-size: clamp(15px, 1.1vw, 16.5px);
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* Institutional Trust Indicators / Badges (Centered, Natural Background) */
+.welcome__features-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+}
+
+.welcome__feature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid rgba(18, 19, 16, 0.14);
+    padding: 8px 20px 8px 10px;
+    border-radius: 999px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink-2);
+}
+
+.welcome__feature-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(22, 163, 74, 0.12);
+    color: #16a34a;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.welcome__feature-icon .icon {
+    width: 13px;
+    height: 13px;
+}
+
+/* CTAs (Centered) */
+.welcome__cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 4px;
+}
+
+.welcome__secondary-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: transparent;
+    border: 1px solid rgba(18, 19, 16, 0.18);
+    transition: all 0.25s var(--ease);
+}
+
+.welcome__secondary-link:hover {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+    gap: 12px;
+}
+
+.welcome__secondary-link .icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.25s var(--ease);
+}
+
+.welcome__secondary-link:hover .icon {
+    transform: translateX(3px);
+}
+
+/* 4-Card Executive Showcase Grid */
+.welcome__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.welcome-card {
+    border-radius: var(--r-md);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    position: relative;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.welcome-card:hover {
+    transform: translateY(-4px);
+}
+
+.welcome-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.welcome-card__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.welcome-card__icon .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.welcome-card__value {
+    margin: 8px 0;
+}
+
+.welcome-card__value .stat {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(40px, 3.4vw, 54px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.welcome-card__desc {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.stat-overline {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Card Themes — Using Original Default Colors (Ink, Media, Ochre, Sage) */
+/* 01. Heritage: Default Ink Black */
+.welcome-card--ink {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.welcome-card--ink:hover {
+    box-shadow: 0 16px 36px rgba(18, 19, 16, 0.22);
+}
+
+.welcome-card--ink .stat-overline {
+    color: rgba(245, 241, 232, 0.65);
+}
+
+.welcome-card--ink .welcome-card__icon {
+    background: rgba(245, 241, 232, 0.12);
+    color: var(--cream);
+}
+
+.welcome-card--ink .stat {
+    color: #ffffff;
+    font-size: clamp(34px, 2.6vw, 42px);
+}
+
+.welcome-card--ink .welcome-card__desc {
+    color: rgba(245, 241, 232, 0.8);
+}
+
+/* 02. Media: Campus Photography Tile */
+.welcome-card--media {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.welcome-card--media:hover {
+    box-shadow: 0 16px 36px rgba(18, 19, 16, 0.15);
+}
+
+.welcome-card--media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s var(--ease);
+}
+
+.welcome-card--media:hover img {
+    transform: scale(1.06);
+}
+
+.welcome-card--media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(18, 19, 16, 0.05) 25%, rgba(18, 19, 16, 0.75) 100%);
+    pointer-events: none;
+}
+
+.welcome-card__media-badge {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(18, 19, 16, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+    flex-shrink: 0;
+}
+
+/* 03. Academics: Original Default Ochre Yellow */
+.welcome-card--ochre {
+    background: var(--ochre);
+    color: var(--ink);
+}
+
+.welcome-card--ochre:hover {
+    box-shadow: 0 16px 36px rgba(203, 157, 6, 0.3);
+}
+
+.welcome-card--ochre .stat-overline {
+    color: rgba(18, 19, 16, 0.65);
+}
+
+.welcome-card--ochre .welcome-card__icon {
+    background: rgba(18, 19, 16, 0.1);
+    color: var(--ink);
+}
+
+.welcome-card--ochre .stat {
+    color: var(--ink);
+}
+
+.welcome-card--ochre .welcome-card__desc {
+    color: rgba(18, 19, 16, 0.82);
+}
+
+/* 04. Collaborations: Original Default Sage Soft Green */
+.welcome-card--sage {
+    background: var(--sage-soft);
+    color: var(--ink);
+}
+
+.welcome-card--sage:hover {
+    box-shadow: 0 16px 36px rgba(111, 127, 95, 0.25);
+}
+
+.welcome-card--sage .stat-overline {
+    color: rgba(18, 19, 16, 0.65);
+}
+
+.welcome-card--sage .welcome-card__icon {
+    background: rgba(18, 19, 16, 0.08);
+    color: var(--ink);
+}
+
+.welcome-card--sage .stat {
+    color: var(--ink);
+}
+
+.welcome-card--sage .welcome-card__desc {
+    color: rgba(18, 19, 16, 0.82);
+}
+
+/* ==========================================================================
+   Courses Offered Section — Centered, Symmetrical, Elevated Academic Showcase
+   ========================================================================== */
+.courses-offered {
+    position: relative;
+    padding-top: clamp(64px, 7vw, 104px);
+    padding-bottom: clamp(64px, 7vw, 104px);
+    background: var(--cream);
+}
+
+.courses-offered .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(36px, 4vw, 52px);
+    align-items: center;
+}
+
+/* Centered Architectural Header */
+.courses-offered__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.courses-offered__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.courses-offered__intro .h2 {
+    font-size: clamp(32px, 3.8vw, 46px);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin: 0;
+    max-width: 720px;
+}
+
+.courses-offered__lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Centered Filter Tabs */
+.courses-filter-tabs {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px;
+    background: rgba(18, 19, 16, 0.04);
+    border: 1px solid rgba(18, 19, 16, 0.08);
+    border-radius: 999px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.courses-filter-tabs .filter-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-2);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s var(--ease);
+}
+
+.courses-filter-tabs .filter-tab:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--ink);
+}
+
+.courses-filter-tabs .filter-tab.is-active {
+    background: var(--ink);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(18, 19, 16, 0.16);
+}
+
+.courses-filter-tabs .filter-tab .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    background: rgba(18, 19, 16, 0.08);
+    color: var(--muted);
+    transition: all 0.25s var(--ease);
+}
+
+.courses-filter-tabs .filter-tab.is-active .count {
+    background: var(--ochre);
+    color: var(--ink);
+}
+
+/* ==========================================================================
+   Course Grid — Balanced 3-Column Layout with Symmetrical Auto-Fill
+   ========================================================================== */
+.courses-offered .course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Each card occupies exactly 1/3 minus gap in a 3-column row */
+.courses-offered .course-card {
+    flex: 0 1 calc((100% - 52px) / 3);
+    min-width: 320px;
+    max-width: calc((100% - 52px) / 3);
+    display: flex;
+    flex-direction: column;
+    padding: 14px 14px 20px;
+    border-radius: var(--r-lg);
+    background: var(--paper);
+    border: 1px solid rgba(18, 19, 16, 0.08);
+    box-shadow: 0 4px 20px -2px rgba(18, 19, 16, 0.04), 0 2px 6px -1px rgba(18, 19, 16, 0.02);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s var(--ease);
+    text-align: left;
+}
+
+.courses-offered .course-card.is-hidden {
+    display: none;
+}
+
+.courses-offered .course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px -8px rgba(18, 19, 16, 0.12), 0 8px 16px -4px rgba(18, 19, 16, 0.04);
+    border-color: rgba(203, 157, 6, 0.3);
+}
+
+/* Floating Media Box */
+.courses-offered .course-card__media {
+    position: relative;
+    height: 185px;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: var(--cream-2);
+}
+
+.courses-offered .course-card__media img,
+.courses-offered .course-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.courses-offered .course-card:hover .course-card__media img,
+.courses-offered .course-card:hover .course-card__img {
+    transform: scale(1.06);
+}
+
+/* Floating Level Badge (Frosted Pill on Image) */
+.courses-offered .course-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--ink);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 4px 12px rgba(18, 19, 16, 0.12);
+}
+
+.courses-offered .course-card__badge .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ochre);
+}
+
+.courses-offered .course-card__badge--pg .badge-dot {
+    background: var(--terra);
+}
+
+/* Floating Circular Disc Link on Image */
+.courses-offered .course-card .disc-link {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--ink);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 4px 12px rgba(18, 19, 16, 0.12);
+    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.courses-offered .course-card:hover .disc-link {
+    background: var(--ochre);
+    color: var(--ink);
+    transform: scale(1.08) rotate(4deg);
+    box-shadow: 0 6px 16px rgba(203, 157, 6, 0.35);
+}
+
+/* Course Card Body */
+.courses-offered .course-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 8px;
+    gap: 12px;
+}
+
+.courses-offered .course-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.courses-offered .course-card__count {
+    font-weight: 700;
+    color: var(--ochre);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 11.5px;
+}
+
+.courses-offered .course-card__type {
+    font-weight: 500;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.courses-offered .course-card__title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.courses-offered .course-card__title a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s var(--ease);
+}
+
+.courses-offered .course-card__title a:hover {
+    color: var(--ochre);
+}
+
+/* Programmes Tags */
+.courses-offered .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 4px;
+    margin-bottom: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.courses-offered .tags li {
+    background: #f4efe6;
+    color: var(--ink-2);
+    border: 1px solid rgba(18, 19, 16, 0.05);
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.35;
+    transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.courses-offered .course-card:hover .tags li {
+    background: #eae2d3;
+    border-color: rgba(18, 19, 16, 0.1);
+}
+
+/* Card Bottom Footer Baseline */
+.courses-offered .course-card__footer {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(18, 19, 16, 0.06);
+}
+
+.courses-offered .course-card__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.courses-offered .course-card__action-arrow {
+    display: inline-block;
+    transition: transform 0.25s var(--ease);
+}
+
+.courses-offered .course-card:hover .course-card__action {
+    color: var(--ochre);
+}
+
+.courses-offered .course-card:hover .course-card__action-arrow {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Postgraduate Signature Dark Card
+   ========================================================================== */
+.courses-offered .course-card--dark {
+    background: linear-gradient(155deg, #1d1e1a 0%, #121310 100%);
+    border: 1px solid rgba(203, 157, 6, 0.3);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.courses-offered .course-card--dark:hover {
+    box-shadow: 0 24px 48px -8px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(203, 157, 6, 0.5);
+    border-color: var(--ochre);
+}
+
+.courses-offered .course-card--dark .course-card__badge--pg {
+    background: rgba(18, 19, 16, 0.88);
+    color: #ffffff;
+    border-color: rgba(203, 157, 6, 0.4);
+}
+
+.courses-offered .course-card--dark .disc-link {
+    background: var(--ochre);
+    color: var(--ink);
+    border-color: var(--ochre);
+}
+
+.courses-offered .course-card--dark .course-card__title a {
+    color: #ffffff;
+}
+
+.courses-offered .course-card--dark .course-card__title a:hover {
+    color: var(--ochre-soft);
+}
+
+.courses-offered .course-card--dark .course-card__count {
+    color: var(--ochre-soft);
+}
+
+.courses-offered .course-card--dark .course-card__type {
+    color: rgba(245, 241, 232, 0.6);
+}
+
+.courses-offered .course-card--dark .tags li {
+    background: rgba(245, 241, 232, 0.1);
+    border-color: rgba(245, 241, 232, 0.12);
+    color: var(--cream);
+}
+
+.courses-offered .course-card--dark:hover .tags li {
+    background: rgba(245, 241, 232, 0.16);
+    border-color: rgba(203, 157, 6, 0.3);
+}
+
+.courses-offered .course-card--dark .course-card__footer {
+    border-top-color: rgba(245, 241, 232, 0.1);
+}
+
+.courses-offered .course-card--dark .course-card__action {
+    color: var(--ochre-soft);
+}
+
+/* ==========================================================================
+   Centered Bottom Call-to-Action
+   ========================================================================== */
+.courses-offered__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.courses-offered__cta-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* New learning system */
+.learning-shell {
+    padding: 24px;
+    background: var(--cream);
+}
+
+.learning-card {
+    background: var(--paper);
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    display: flex;
+}
+
+.learning-card__media {
+    position: relative;
+    width: 560px;
+    flex: none;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 240px;
+    color: var(--cream);
+    isolation: isolate;
+}
+
+.learning-card__media>img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.learning-card__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(18, 19, 16, 0) 45%, rgba(18, 19, 16, .85) 100%);
+}
+
+.first-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px 8px 8px;
+    border-radius: 999px;
+    background: rgba(18, 19, 16, .55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.first-badge__disc {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--ochre);
+    color: var(--ink);
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.learning-card__quote {
+    margin: 0;
+    border-left: 3px solid var(--ochre);
+    padding-left: 14px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.learning-card__text {
+    flex: 1;
+    padding: clamp(32px, 5vw, 72px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.feature {
+    background: var(--cream);
+    border-radius: 22px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.feature h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.feature p {
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--muted);
+    margin-top: -10px;
+}
+
+/* Placement support */
+.placement-support {
+    background: var(--cream-2);
+}
+
+.placement-support__row {
+    display: flex;
+    gap: clamp(40px, 6.67vw, 96px);
+    align-items: center;
+}
+
+.collage {
+    position: relative;
+    width: 480px;
+    height: 600px;
+    flex: none;
+}
+
+.collage__main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 36px;
+}
+
+.collage__small {
+    display: none;
+}
+
+.badge-100 {
+    position: absolute;
+    right: -24px;
+    top: -48px;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    background: var(--ochre);
+    transform: rotate(8deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+    animation: wobble 8s ease-in-out infinite;
+}
+
+.badge-100 strong {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.06;
+    letter-spacing: -1.8px;
+}
+
+.badge-100 span {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+}
+
+.placement-support__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .learning-card {
+        flex-direction: column;
+    }
+
+    .learning-card__media {
+        width: 100%;
+        min-height: 460px;
+        gap: 120px;
+    }
+
+    .placement-support__row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .welcome__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .welcome-card {
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .courses-offered .course-card {
+        flex: 0 1 calc((100% - 24px) / 2);
+        max-width: calc((100% - 24px) / 2);
+    }
+}
+
+@media (max-width: 767px) {
+    .recognition-card {
+        width: 100%;
+    }
+
+    .welcome__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome__features-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .welcome__feature-pill {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .welcome__cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .welcome__cta-row .btn,
+    .welcome__secondary-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .courses-filter-tabs {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .courses-filter-tabs .filter-tab {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 9px 14px;
+    }
+
+    .courses-offered .course-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .courses-offered .course-card__media {
+        height: 165px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card__media {
+        min-height: 420px;
+        padding: 20px;
+    }
+
+    .collage {
+        width: 100%;
+        max-width: 400px;
+        height: 480px;
+        margin-top: 60px;
+    }
+
+    .collage__main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .collage__small {
+        display: none;
+    }
+
+    .badge-100 {
+        left: auto;
+        right: -10px;
+        top: -45px;
+        width: 128px;
+        height: 128px;
+    }
+
+    .badge-100 strong {
+        font-size: 38px;
+    }
+
+    .badge-100 span {
+        font-size: 11px;
+    }
+}

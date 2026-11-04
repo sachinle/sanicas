@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Shared by RESEARCH + IQAC pages (imported from research.css / iqac.css)
+   ========================================================================== */
+
+.page-anchor { scroll-margin-top: 110px; }
+
+/* Section tabs under the hero */
+.page-tabs { background: var(--cream); padding: 40px var(--gutter) 0; }
+.page-tabs .filter-tabs { max-width: 1200px; margin: 0 auto; }
+
+/* Section head: title left, optional text right */
+.pg-head { display: flex; gap: 80px; align-items: flex-end; margin-bottom: 48px; }
+.pg-head__title { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; flex: 0 1 640px; min-width: 0; }
+.pg-head > p { flex: 1; min-width: 0; max-width: 520px; margin-left: auto; }
+
+/* Text + photo stack row */
+.split-row { display: flex; gap: 64px; align-items: center; }
+.split-row__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.photo-stack { position: relative; width: 520px; height: 480px; flex: none; }
+.photo-stack img { position: absolute; object-fit: cover; }
+.photo-stack__a { left: 0; top: 0; width: 520px; height: 400px; border-radius: 32px; }
+.photo-stack__b { right: 24px; bottom: 0; width: 220px; height: 236px; border-radius: 26px; border: 8px solid var(--cream); box-shadow: 0 18px 40px rgba(18, 19, 16, .18); }
+.photo-badge {
+    position: absolute; left: 16px; bottom: 56px; display: inline-flex; align-items: center; gap: 12px;
+    background: var(--ink); color: var(--cream); border-radius: 16px; padding: 10px 18px 10px 10px;
+}
+.photo-badge__disc { width: 36px; height: 36px; border-radius: 50%; background: var(--ochre); color: var(--ink); display: grid; place-items: center; flex: none; }
+.photo-badge__disc .icon { width: 18px; height: 18px; }
+.photo-badge strong { display: block; font-size: 15px; font-weight: 600; line-height: 1.2; }
+.photo-badge small { display: block; font-size: 12px; line-height: 1.4; color: rgba(245, 241, 232, .65); }
+
+/* Initials discs */
+.ini {
+    width: 44px; height: 44px; border-radius: 50%; flex: none; display: grid; place-items: center;
+    background: var(--ink); color: var(--ochre); font-size: 15px; font-weight: 500; line-height: 1;
+}
+.ini--ochre { background: var(--ochre); color: var(--ink); }
+.ini--sage { background: var(--sage-soft); color: var(--ink); }
+.ini--dark { background: #1f201b; color: var(--cream); }
+.ini--md { width: 56px; height: 56px; font-size: 18px; }
+.ini--lg {
+    width: 64px; height: 64px; background: var(--ink); color: var(--ochre);
+    font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.3px;
+}
+
+/* Leadership pair + member tiles (on ink) */
+.lead-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+.lead-tile { border-radius: 30px; padding: 22px; display: flex; gap: 18px; align-items: center; color: var(--ink); }
+.lead-tile > div { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.lead-tile--ochre { background: var(--ochre); }
+.lead-tile--cream { background: var(--cream); }
+.lead-tile--ink { background: var(--ink); color: var(--cream); }
+.lead-tile--ink .overline { color: var(--ochre); }
+.lead-tile--ink .ini--lg { background: var(--ochre); color: var(--ink); }
+.lead-tile__sub { color: rgba(18, 19, 16, .7); }
+.lead-tile--ink .lead-tile__sub { color: rgba(245, 241, 232, .7); }
+.member-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.mem { background: var(--ink-3); color: var(--cream); border-radius: 22px; padding: 16px; display: flex; gap: 14px; align-items: center; }
+.mem > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.mem .caption { color: rgba(245, 241, 232, .6); }
+.mem__name { font-size: 16px; font-weight: 600; line-height: 1.2; }
+
+/* Ochre contact / CTA card */
+.ochre-card { background: var(--ochre); border-radius: 40px; padding: 48px 56px; display: flex; gap: 48px; align-items: center; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .split-row { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 1080px) {
+    .pg-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .pg-head__title { flex: none; }
+    .pg-head > p { margin-left: 0; }
+    .member-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+    .lead-pair { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .page-tabs { padding-top: 32px; }
+    .page-tabs .filter-tabs { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter) 4px; scrollbar-width: none; }
+    .pg-head { margin-bottom: 36px; }
+    .photo-stack { width: 100%; height: auto; aspect-ratio: 520 / 480; }
+    .photo-stack__a { width: 100%; height: 83%; }
+    .photo-stack__b { width: 42%; height: 49%; right: 4%; }
+    .photo-badge { bottom: 8%; }
+    .member-row { grid-template-columns: 1fr; }
+    .lead-tile { padding: 18px; gap: 14px; }
+    .ini--lg { width: 52px; height: 52px; font-size: 18px; }
+    .ochre-card { padding: 32px 24px; border-radius: 32px; }
+}

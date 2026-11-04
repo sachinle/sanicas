@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# Browser caching — lets refreshes and page-to-page navigation reuse images,
+# CSS and JS instead of downloading them again.
+# CSS/JS URLs carry ?v=<file time>, so edits still show up immediately.
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Photos, logos, icons, fonts: 30 days
+    <FilesMatch "\.(jpe?g|png|gif|webp|avif|svg|ico|woff2?)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+    # Stylesheets and scripts (versioned in the URL): 7 days
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+    # PDFs: 1 day
+    <FilesMatch "\.pdf$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+
+# Same rules via mod_expires, if it is ever enabled on the live server.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType text/javascript "access plus 7 days"
+</IfModule>
+
+# WebP, for servers whose mime.types predates it.
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+</IfModule>
+
+# Compress text responses, if mod_deflate is enabled.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/json
+</IfModule>
