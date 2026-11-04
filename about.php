@@ -186,20 +186,19 @@ $milestones = [
         </article>
 
         <article class="chairperson chairperson--sm reveal">
-            <img src="<?= fig('balakumar.jepg') ?>" alt="Adv. T. Balakumar, Treasurer / Trustee" loading="lazy">
+            <img src="<?= fig('balakumar.jepg') ?>" alt="Adv. T. Balakumar, Managing Director, Treasurer / Trustee" loading="lazy">
             <div class="chairperson__msg">
-                <?= chip('Treasurer & Trustee', 'ochre') ?>
+                <?= chip('Managing Director & Trustee', 'ochre') ?>
                 <blockquote class="body">
-                    <p>It is a privilege to be associated with SAN International College of Arts and Science, an institution that is committed to shaping bright futures through quality education, innovation, and holistic development.</p>
-                    <p>At our institution, we believe that education is the foundation for personal growth, professional success, and social progress. Our commitment is to create a learning environment that encourages students to think critically, embrace innovation, develop practical skills, and uphold strong ethical values.</p>
-                    <p>We strive to provide quality education supported by modern infrastructure, dedicated faculty, and opportunities for academic, personal, and professional development. Our aim is to ensure that every student receives the guidance, encouragement, and resources needed to discover their potential and achieve their aspirations.</p>
-                    <p>As part of Sree Amman Trust, we remain committed to strengthening educational opportunities and fostering an inclusive, supportive, and forward-looking academic community. We believe that true education goes beyond earning a degree; it prepares individuals to face challenges with confidence, integrity, and responsibility.</p>
-                    <p>I extend my best wishes to our students, faculty, parents, and all stakeholders. Together, let us continue to build a brighter future through knowledge, dedication, and excellence.</p>
-                    <p>With best wishes for your success and a rewarding educational journey.</p>
+                    <p>It is our vision at SAN International College of Arts and Science to empower young minds through quality education, innovation, and excellence.</p>
+                    <p>We are committed to providing a vibrant learning environment enriched with modern infrastructure, dedicated faculty, and skill-oriented education that nurtures knowledge, creativity, and leadership.</p>
+                    <p>Our mission is to transform students into confident, competent, and responsible individuals, ready to meet global challenges and shape a better tomorrow.</p>
+                    <p>Together, let us inspire excellence, empower potential, and build future leaders.</p>
+                    <p>My best wishes to all students for a successful and rewarding academic journey!</p>
                 </blockquote>
                 <div class="chairperson__name">
                     <p class="h3">Adv. T. Balakumar</p>
-                    <p class="label">Treasurer / Trustee, Sree Amman Trust · M.B.A., LL.B. · Advocate</p>
+                    <p class="label">Managing Director, Treasurer / Trustee, Sree Amman Trust · B.E., LL.B.</p>
                 </div>
             </div>
         </article>
