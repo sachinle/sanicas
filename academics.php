@@ -86,7 +86,7 @@ $faculty = [
         ['Mr. Gokul', 'Assistant Professor', 'G', false],
     ]],
     ['Psychology', [
-        ['Ms. Santhiya M', 'Assistant Professor, Head of the Department', 'SM', true],
+        ['Ms. Santhiya M', 'Head of the Department', 'SM', true],
     ]],
     ['Computer Science & Applications', [
         ['Mrs. Sruthi S', 'Assistant Professor, Head of the Department', 'SS', true],

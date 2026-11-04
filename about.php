@@ -154,7 +154,12 @@ $milestones = [
             <img src="<?= fig('chairperson.jpg') ?>" alt="Tmt. T. Jayalakshmi, M.A., Chairperson" loading="lazy">
             <div class="chairperson__msg">
                 <?= chip('Trustee & Chairperson', 'ochre') ?>
-                <blockquote class="body">“I would like to take this opportunity to welcome you on behalf of our students, admin., faculty and staff members. We take great pride to offer an exceptional learning atmosphere with modern facilities in which students can achieve their best. We are creating an academic environment where outstanding students can be continually challenged and inspired to excel their studies here. At Amman we provide flexible admission and registration process that allows you to meet your individual goals. Here you will discover a rigorous, market focused programme of study in a unique and intimate atmosphere that will be supportive and cordial. Here you can shape your world however you define it. Come and experience your access to excellence.”</blockquote>
+                <blockquote class="body">
+                    <p>It is my privilege to extend my warm greetings to the students, parents, faculty, and well-wishers of SAN International College of Arts and Science.</p>
+                    <p>At SAN, we are committed to academic excellence, world-class infrastructure, skill enhancement, and holistic development. We strive to provide a vibrant learning environment that promotes knowledge, research, innovation, creativity, and professional competence.</p>
+                    <p>Our mission is to nurture talents, strengthen skills, instil values, and empower students to become confident, competent, and responsible future leaders.</p>
+                    <p>Together, let us strive for excellence and shape a brighter future through quality education.</p>
+                </blockquote>
                 <div class="chairperson__name">
                     <p class="h3">Tmt. T. Jayalakshmi, M.A.</p>
                     <p class="label">Chairperson / Trustee, Sree Amman Trust</p>
@@ -162,24 +167,42 @@ $milestones = [
             </div>
         </article>
 
-        <div class="grid-2 trustee-grid">
-            <article class="trustee reveal">
-                <div class="trustee__head">
-                    <span class="avatar avatar--ochre">TG</span>
-                    <div><p class="h3">Ar. T. Giri</p><p class="label">M.Arch. · Environmental Architect</p></div>
+        <article class="chairperson chairperson--sm reveal">
+            <div class="chairperson__avatar-box">
+                <span class="avatar avatar--ochre avatar--xl">TG</span>
+            </div>
+            <div class="chairperson__msg">
+                <?= chip('Secretary & Trustee', 'ochre') ?>
+                <blockquote class="body">
+                    <p>It is our commitment to provide an enriching educational environment that promotes academic excellence, innovation, and holistic development. At SAN International College of Arts and Science, we strive to create opportunities that empower students with knowledge, skills, and values essential for their personal and professional growth.</p>
+                    <p>We believe that education is a powerful tool for shaping responsible individuals and building a progressive society. Through continuous development and collective effort, we aspire to provide quality education and prepare our students to meet the challenges of the future.</p>
+                    <p>Wishing the institution and its students continued growth and success.</p>
+                </blockquote>
+                <div class="chairperson__name">
+                    <p class="h3">Ar. T. Giri</p>
+                    <p class="label">Secretary / Trustee, Sree Amman Trust · M.Arch. · Environmental Architect</p>
                 </div>
-                <p class="overline">Secretary / Trustee, Sree Amman Trust</p>
-                <p class="body-s">Secretary Sree Amman Trust, is the driving force of San Academy of Architecture. He obtained his Architecture degree in the year 1999. He has gained tremendous knowledge in the world of architectural marvels by running his own firm THE GRID.</p>
-            </article>
-            <article class="trustee reveal">
-                <div class="trustee__head">
-                    <span class="avatar avatar--terra">TB</span>
-                    <div><p class="h3">T. Balakumar</p><p class="label">M.B.A., LLB. · Advocate</p></div>
+            </div>
+        </article>
+
+        <article class="chairperson chairperson--sm reveal">
+            <img src="<?= fig('balakumar.jepg') ?>" alt="Adv. T. Balakumar, Treasurer / Trustee" loading="lazy">
+            <div class="chairperson__msg">
+                <?= chip('Treasurer & Trustee', 'ochre') ?>
+                <blockquote class="body">
+                    <p>It is a privilege to be associated with SAN International College of Arts and Science, an institution that is committed to shaping bright futures through quality education, innovation, and holistic development.</p>
+                    <p>At our institution, we believe that education is the foundation for personal growth, professional success, and social progress. Our commitment is to create a learning environment that encourages students to think critically, embrace innovation, develop practical skills, and uphold strong ethical values.</p>
+                    <p>We strive to provide quality education supported by modern infrastructure, dedicated faculty, and opportunities for academic, personal, and professional development. Our aim is to ensure that every student receives the guidance, encouragement, and resources needed to discover their potential and achieve their aspirations.</p>
+                    <p>As part of Sree Amman Trust, we remain committed to strengthening educational opportunities and fostering an inclusive, supportive, and forward-looking academic community. We believe that true education goes beyond earning a degree; it prepares individuals to face challenges with confidence, integrity, and responsibility.</p>
+                    <p>I extend my best wishes to our students, faculty, parents, and all stakeholders. Together, let us continue to build a brighter future through knowledge, dedication, and excellence.</p>
+                    <p>With best wishes for your success and a rewarding educational journey.</p>
+                </blockquote>
+                <div class="chairperson__name">
+                    <p class="h3">Adv. T. Balakumar</p>
+                    <p class="label">Treasurer / Trustee, Sree Amman Trust · M.B.A., LL.B. · Advocate</p>
                 </div>
-                <p class="overline">Treasurer / Trustee, Sree Amman Trust</p>
-                <p class="body-s">Treasurer and Trustee of Sree Amman Trust and Managing Director of SAN Group of Institutions. With a strong multidisciplinary background in management and law, he plays a vital role in steering the strategic growth, operational excellence, and holistic development of the institutions under the Trust.</p>
-            </article>
-        </div>
+            </div>
+        </article>
     </div>
 </section>
 

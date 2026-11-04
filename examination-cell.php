@@ -51,7 +51,7 @@ $notices = [
 // University Rank Holders (Bharathiar University Examinations)
 $ranks = [
     ['Anusree K', 'M.Sc. Microbiology', '2021 – 2023', '2nd Rank', 'images/rank-anusree-k.jpg'],
-    ['Preethu P', 'M.Sc. Microbiology', '2021 – 2023', '10th Rank', 'images/rank-preethu-p.jpg'],
+    ['', 'M.Sc. Microbiology', '2021 – 2023', '10th Rank', 'images/rank-preethu-p.jpg'],
 ];
 
 // Guidelines: [text, highlighted]

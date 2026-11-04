@@ -556,7 +556,35 @@
     display: flex;
     gap: 56px;
     align-items: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
+}
+
+.chairperson:last-child {
+    margin-bottom: 0;
+}
+
+.chairperson__avatar-box {
+    width: 420px;
+    height: 420px;
+    flex: none;
+    background: var(--ink-2);
+    border-radius: var(--r-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(245, 241, 232, .06);
+}
+
+.chairperson__avatar-box .avatar--xl {
+    width: 140px;
+    height: 140px;
+    font-size: 52px;
+    border-radius: 50%;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .35);
+}
+
+.chairperson>img[src*="balakumar"] {
+    object-position: center 15%;
 }
 
 .chairperson>img {
@@ -578,6 +606,9 @@
 .chairperson__msg blockquote {
     margin: 0;
     color: rgba(245, 241, 232, .88);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .chairperson__name {
@@ -623,6 +654,18 @@
 
 .trustee .body-s {
     color: rgba(245, 241, 232, .78);
+    line-height: 1.6;
+}
+
+.trustee-grid {
+    align-items: stretch;
+}
+
+.trustee__content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
 }
 
 .avatar {
@@ -637,6 +680,8 @@
     font-weight: 600;
     font-size: 22px;
     letter-spacing: -0.3px;
+    object-fit: cover;
+    object-position: center 20%;
 }
 
 .avatar--ochre {
@@ -688,7 +733,8 @@
         gap: 32px;
     }
 
-    .chairperson>img {
+    .chairperson>img,
+    .chairperson__avatar-box {
         width: 100%;
         height: auto;
         aspect-ratio: 1;
