@@ -217,7 +217,7 @@ $ugTotal = array_sum(array_map(function ($d) { return count($d[5]); }, $departme
             </div>
             <div class="downloads-card__actions">
                 <?= btn('Brochure', asset('docs/sanicas-brochure-2026.pdf'), 'dark', 'target="_blank" rel="noopener" download') ?>
-                <?= btn('Application Form', asset('docs/san-new-2026.pdf'), 'light', 'target="_blank" rel="noopener" download') ?>
+                <?= btn('Application Form', asset('docs/san-application-form-2026.pdf'), 'light', 'target="_blank" rel="noopener" download') ?>
                 <?= btn('Contact us', url('contact.php'), 'light') ?>
             </div>
         </div>

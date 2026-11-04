@@ -150,58 +150,72 @@ $milestones = [
             </div>
         </div>
 
-        <article class="chairperson reveal">
-            <img src="<?= fig('chairperson.jpg') ?>" alt="Tmt. T. Jayalakshmi, M.A., Chairperson" loading="lazy">
-            <div class="chairperson__msg">
-                <?= chip('Trustee & Chairperson', 'ochre') ?>
+        <article class="trustee-feature reveal">
+            <div class="trustee-feature__media">
+                <img src="<?= fig('chairperson.jpg') ?>" alt="Tmt. T. Jayalakshmi, M.A., Chairperson" loading="lazy">
+            </div>
+            <div class="trustee-feature__msg">
+                <?= chip('Trustee & Chairperson', 'dark') ?>
                 <blockquote class="body">
                     <p>It is my privilege to extend my warm greetings to the students, parents, faculty, and well-wishers of SAN International College of Arts and Science.</p>
                     <p>At SAN, we are committed to academic excellence, world-class infrastructure, skill enhancement, and holistic development. We strive to provide a vibrant learning environment that promotes knowledge, research, innovation, creativity, and professional competence.</p>
                     <p>Our mission is to nurture talents, strengthen skills, instil values, and empower students to become confident, competent, and responsible future leaders.</p>
                     <p>Together, let us strive for excellence and shape a brighter future through quality education.</p>
                 </blockquote>
-                <div class="chairperson__name">
+                <div class="trustee-feature__name">
                     <p class="h3">Tmt. T. Jayalakshmi, M.A.</p>
                     <p class="label">Chairperson / Trustee, Sree Amman Trust</p>
                 </div>
             </div>
         </article>
 
-        <article class="chairperson chairperson--sm reveal">
-            <div class="chairperson__avatar-box">
-                <span class="avatar avatar--ochre avatar--xl">TG</span>
-            </div>
-            <div class="chairperson__msg">
-                <?= chip('Secretary & Trustee', 'ochre') ?>
-                <blockquote class="body">
-                    <p>It is our commitment to provide an enriching educational environment that promotes academic excellence, innovation, and holistic development. At SAN International College of Arts and Science, we strive to create opportunities that empower students with knowledge, skills, and values essential for their personal and professional growth.</p>
-                    <p>We believe that education is a powerful tool for shaping responsible individuals and building a progressive society. Through continuous development and collective effort, we aspire to provide quality education and prepare our students to meet the challenges of the future.</p>
-                    <p>Wishing the institution and its students continued growth and success.</p>
-                </blockquote>
-                <div class="chairperson__name">
-                    <p class="h3">Ar. T. Giri</p>
-                    <p class="label">Secretary / Trustee, Sree Amman Trust · M.Arch. · Environmental Architect</p>
+        <div class="trustee-duo">
+            <article class="trustee-card reveal">
+                <div class="trustee-card__top">
+                    <div class="trustee-card__media trustee-card__media--avatar">
+                        <span class="avatar avatar--ochre avatar--xl">TG</span>
+                    </div>
+                    <div class="trustee-card__ident">
+                        <?= chip('Secretary & Trustee', 'ochre') ?>
+                        <div class="trustee-card__name">
+                            <p class="h3">Ar. T. Giri</p>
+                            <p class="label">Secretary / Trustee, Sree Amman Trust &middot; M.Arch. &middot; Environmental Architect</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </article>
+                <div class="trustee-card__body">
+                    <blockquote class="body-s">
+                        <p>It is our commitment to provide an enriching educational environment that promotes academic excellence, innovation, and holistic development. At SAN International College of Arts and Science, we strive to create opportunities that empower students with knowledge, skills, and values essential for their personal and professional growth.</p>
+                        <p>We believe that education is a powerful tool for shaping responsible individuals and building a progressive society. Through continuous development and collective effort, we aspire to provide quality education and prepare our students to meet the challenges of the future.</p>
+                        <p>Wishing the institution and its students continued growth and success.</p>
+                    </blockquote>
+                </div>
+            </article>
 
-        <article class="chairperson chairperson--sm reveal">
-            <img src="<?= fig('balakumar.jepg') ?>" alt="Adv. T. Balakumar, Managing Director, Treasurer / Trustee" loading="lazy">
-            <div class="chairperson__msg">
-                <?= chip('Managing Director & Trustee', 'ochre') ?>
-                <blockquote class="body">
-                    <p>It is our vision at SAN International College of Arts and Science to empower young minds through quality education, innovation, and excellence.</p>
-                    <p>We are committed to providing a vibrant learning environment enriched with modern infrastructure, dedicated faculty, and skill-oriented education that nurtures knowledge, creativity, and leadership.</p>
-                    <p>Our mission is to transform students into confident, competent, and responsible individuals, ready to meet global challenges and shape a better tomorrow.</p>
-                    <p>Together, let us inspire excellence, empower potential, and build future leaders.</p>
-                    <p>My best wishes to all students for a successful and rewarding academic journey!</p>
-                </blockquote>
-                <div class="chairperson__name">
-                    <p class="h3">Adv. T. Balakumar</p>
-                    <p class="label">Managing Director, Treasurer / Trustee, Sree Amman Trust · B.E., LL.B.</p>
+            <article class="trustee-card reveal">
+                <div class="trustee-card__top">
+                    <div class="trustee-card__media">
+                        <img src="<?= fig('balakumar.jepg') ?>" alt="Adv. T. Balakumar, Managing Director, Treasurer / Trustee" loading="lazy">
+                    </div>
+                    <div class="trustee-card__ident">
+                        <?= chip('Managing Director & Trustee', 'ochre') ?>
+                        <div class="trustee-card__name">
+                            <p class="h3">Adv. T. Balakumar</p>
+                            <p class="label">Managing Director, Treasurer / Trustee, Sree Amman Trust &middot; B.E., LL.B.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </article>
+                <div class="trustee-card__body">
+                    <blockquote class="body-s">
+                        <p>It is our vision at SAN International College of Arts and Science to empower young minds through quality education, innovation, and excellence.</p>
+                        <p>We are committed to providing a vibrant learning environment enriched with modern infrastructure, dedicated faculty, and skill-oriented education that nurtures knowledge, creativity, and leadership.</p>
+                        <p>Our mission is to transform students into confident, competent, and responsible individuals, ready to meet global challenges and shape a better tomorrow.</p>
+                        <p>Together, let us inspire excellence, empower potential, and build future leaders.</p>
+                        <p>My best wishes to all students for a successful and rewarding academic journey!</p>
+                    </blockquote>
+                </div>
+            </article>
+        </div>
     </div>
 </section>
 

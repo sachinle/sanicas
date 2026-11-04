@@ -147,14 +147,14 @@ $courseOfferings = [
         'title' => 'Add-on Courses',
         'desc'  => 'Industry-aligned practical modules',
         'action'=> 'View details',
-        'href'  => '',
+        'href'  => url('admission.php#addon-certificate'),
     ],
     [
         'badge' => 'Career Training',
         'title' => 'Certificate Courses',
         'desc'  => 'Professional career certifications',
         'action'=> 'View details',
-        'href'  => '',
+        'href'  => url('admission.php#addon-certificate'),
     ],
 ];
 ?>

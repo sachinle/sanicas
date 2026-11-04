@@ -924,11 +924,13 @@
 
 /* New learning system */
 .learning-shell {
-    padding: 24px;
+    padding: clamp(56px, 6vw, 88px) var(--gutter);
     background: var(--cream);
 }
 
 .learning-card {
+    max-width: calc(var(--maxw) - 2 * 120px);
+    margin: 0 auto;
     background: var(--paper);
     border-radius: var(--r-xl);
     overflow: hidden;
@@ -937,7 +939,8 @@
 
 .learning-card__media {
     position: relative;
-    width: 560px;
+    width: 44%;
+    min-width: 360px;
     flex: none;
     padding: 32px;
     display: flex;

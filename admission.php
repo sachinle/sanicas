@@ -94,6 +94,7 @@ $ugCount = array_sum(array_map('count', $ugDepartments));
             <div class="btn-row">
                 <?= btn('Apply now', '#admission-form', 'primary') ?>
                 <?= btn('Download brochure', asset('docs/sanicas-brochure-2026.pdf'), 'glass', 'target="_blank" rel="noopener"') ?>
+                <?= btn('Download application form', asset('docs/san-application-form-2026.pdf'), 'glass', 'target="_blank" rel="noopener" download') ?>
             </div>
         </div>
     </div>
@@ -171,7 +172,7 @@ $ugCount = array_sum(array_map('count', $ugDepartments));
             </div>
         </div>
 
-        <div class="prog-group">
+        <div class="prog-group" id="addon-certificate">
             <div class="prog-group__head">
                 <h3 class="prog-group__title">Add-on &amp; Certificate Courses</h3>
             </div>
