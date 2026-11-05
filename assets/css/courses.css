@@ -63,10 +63,11 @@
     position: relative;
     border-radius: 28px;
     overflow: hidden;
-    min-height: 220px;
+    min-height: 260px;
     padding: clamp(28px, 4vw, 44px);
     display: flex;
     align-items: flex-end;
+    background: var(--ink, #121310);
 }
 
 .dept-banner__bg {
@@ -86,9 +87,15 @@
 .dept-banner__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(14, 15, 12, 0.94) 0%, rgba(14, 15, 12, 0.78) 50%, rgba(14, 15, 12, 0.45) 100%);
-    backdrop-filter: blur(2px);
+    /* Solid ink behind the title, clear photo on the right */
+    background:
+        linear-gradient(90deg, rgba(14, 15, 12, 0.75) 0%, rgba(14, 15, 12, 0.45) 35%, rgba(14, 15, 12, 0) 65%),
+        rgba(14, 15, 12, 0.35);
 }
+
+/* Keep faces in frame on portrait-heavy photos */
+#management .dept-banner__bg { object-position: center 28%; }
+#media .dept-banner__bg { object-position: center 18%; }
 
 .dept-banner__content {
     position: relative;
@@ -406,7 +413,8 @@
     .dept-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
 }
 @media (max-width: 768px) {
-    .dept-banner { min-height: 180px; padding: 24px; }
+    .dept-banner { min-height: 240px; padding: 24px; }
+    .dept-banner__overlay { background: linear-gradient(0deg, rgba(14, 15, 12, 0.8) 0%, rgba(14, 15, 12, 0.4) 45%, rgba(14, 15, 12, 0) 85%), rgba(14, 15, 12, 0.3); }
     .dept-banner__title { font-size: 28px; }
     .track__list { grid-template-columns: minmax(0, 1fr); padding-left: 20px; }
     .track__list .track__item::before { content: none; }
