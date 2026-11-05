@@ -79,7 +79,7 @@
     transition: transform .7s var(--ease);
 }
 
-.dept-block:hover .dept-banner__bg {
+.dept-banner:hover .dept-banner__bg {
     transform: scale(1.03);
 }
 
@@ -116,85 +116,102 @@
     margin: 0;
 }
 
-/* Course Deck Grid (3-column layout) */
 .dept-body {
     width: 100%;
 }
 
-.course-deck {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-}
-
-.course-card-tile {
-    background: var(--cream);
-    border-radius: 22px;
-    padding: 22px 24px;
+/* ── Award tracks ───────────────────────────────────────────
+   Department -> award -> specialisation. The award anchors each
+   track on the left; its pathways hang off an ochre spine.      */
+.award-tracks {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 14px;
-    min-height: 130px;
-    border: 1px solid rgba(18, 19, 16, 0.06);
-    transition: all 0.25s var(--ease);
-    position: relative;
+    gap: 4px;
 }
 
-.course-card-tile:hover {
-    background: #fff;
-    transform: translateY(-3px);
-    border-color: rgba(203, 157, 6, 0.4);
-    box-shadow: 0 12px 28px rgba(18, 19, 16, 0.08);
+.track {
+    display: grid;
+    grid-template-columns: 232px minmax(0, 1fr);
+    gap: 0 40px;
+    padding: 30px 8px 30px 16px;
+    align-items: start;
 }
 
-.course-card-tile__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.track + .track {
+    border-top: 1px solid rgba(18, 19, 16, 0.09);
 }
 
-.course-card-tile__num {
+.track__award {
+    padding-top: 2px;
+}
+
+.track__abbr {
     font-family: var(--font-display);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--ochre);
-    background: rgba(203, 157, 6, 0.12);
-    padding: 3px 10px;
-    border-radius: 12px;
-    letter-spacing: 0.04em;
-}
-
-.course-card-tile__icon {
-    color: rgba(18, 19, 16, 0.35);
-    transition: transform 0.2s var(--ease), color 0.2s var(--ease);
-}
-
-.course-card-tile__icon .icon {
-    width: 18px;
-    height: 18px;
-}
-
-.course-card-tile:hover .course-card-tile__icon {
-    color: var(--ochre);
-    transform: translate(2px, -2px);
-}
-
-.course-card-tile__name {
-    font-size: 15.5px;
-    font-weight: 600;
-    line-height: 1.35;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1;
     color: var(--ink);
     margin: 0;
-    letter-spacing: -0.01em;
 }
 
-.course-card-tile__dept {
-    font-size: 12px;
-    color: rgba(18, 19, 16, 0.5);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.track__full {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: rgba(18, 19, 16, 0.55);
+    margin: 10px 0 0;
+    max-width: 26ch;
+}
+
+.track__count {
+    font-size: 13px;
     font-weight: 600;
+    color: var(--ochre);
+    margin: 14px 0 0;
+}
+
+/* The spine: pathways branch off it. */
+.track__list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 28px;
+    border-left: 2px solid rgba(203, 157, 6, 0.55);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 36px;
+}
+
+.track__item {
+    position: relative;
+    padding: 13px 10px 13px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.track__item:nth-child(odd):nth-child(n + 3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(200% + 36px);
+    height: 1px;
+    background: rgba(18, 19, 16, 0.07);
+}
+
+.track__spec {
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    letter-spacing: -0.008em;
+}
+
+.track__note {
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: rgba(18, 19, 16, 0.5);
 }
 
 /* Media Creative Deck Layout */
@@ -377,7 +394,8 @@
     .courses-hero { flex-direction: column; align-items: flex-start; }
     .courses-collage { width: 100%; max-width: 440px; height: 420px; }
     .courses-collage__sticker { right: -10px; top: -14px; width: 108px; height: 108px; font-size: 13px; }
-    .course-deck { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .track { grid-template-columns: minmax(0, 1fr); gap: 20px 0; }
+    .track__full { max-width: none; }
     .media-deck { grid-template-columns: 1fr; }
     .downloads-card { flex-direction: column; align-items: flex-start; }
     .downloads-card__actions { justify-content: flex-start; }
@@ -390,7 +408,11 @@
 @media (max-width: 768px) {
     .dept-banner { min-height: 180px; padding: 24px; }
     .dept-banner__title { font-size: 28px; }
-    .course-deck { grid-template-columns: 1fr; }
+    .track__list { grid-template-columns: minmax(0, 1fr); padding-left: 20px; }
+    .track__list .track__item::before { content: none; }
+    .track__list .track__item:nth-child(n + 2)::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: rgba(18, 19, 16, 0.07); }
+    .track { padding: 24px 0 24px 4px; }
+    .track__abbr { font-size: 28px; }
     .media-deck__modules-grid { grid-template-columns: 1fr; }
     .dept-block { border-radius: 28px; padding: 14px; }
 }

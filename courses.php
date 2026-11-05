@@ -38,6 +38,70 @@ $pg = [
     ['pg-life-science', 'M.Sc. Microbiology', 'Department of Life Science', 'ochre', 'images/Copy of 255A5308.JPG'],
 ];
 $ugTotal = array_sum(array_map(function ($d) { return count($d[5]); }, $departments));
+
+/**
+ * Split a programme title into the parts a student actually scans:
+ * the award they graduate with, the specialisation, and any certification note.
+ * 'B.Com PA With ACCA (Association of Chartered Certified Accountants)'
+ *   -> ['B.Com PA', 'ACCA', 'Association of Chartered Certified Accountants']
+ */
+function split_programme($titleText)
+{
+    $awards = ['B.Com CA', 'B.Com PA', 'B.Com', 'BBA CA', 'BBA', 'BCA', 'B.Sc.', 'M.Sc.'];
+    $award = '';
+    $rest  = trim($titleText);
+
+    foreach ($awards as $a) {
+        if (stripos($rest, $a . ' ') === 0) {
+            $award = $a;
+            $rest  = trim(substr($rest, strlen($a)));
+            break;
+        }
+    }
+
+    // 'With Cloud Computing' / 'with Data Analytics' -> 'Cloud Computing'
+    $rest = preg_replace('/^with\s+/i', '', $rest);
+
+    // Pull a trailing parenthetical out as a quiet note under the title.
+    $note = '';
+    if (preg_match('/^(.*?)\s*\(([^()]+)\)\s*$/', $rest, $m)) {
+        $rest = trim($m[1]);
+        $note = trim($m[2]);
+    }
+
+    return [$award, $rest, $note];
+}
+
+/** What the abbreviation actually stands for — most families don't know. */
+function award_full($award)
+{
+    $map = [
+        'BCA'      => 'Bachelor of Computer Applications',
+        'B.Sc.'    => 'Bachelor of Science',
+        'BBA'      => 'Bachelor of Business Administration',
+        'BBA CA'   => 'Bachelor of Business Administration, Computer Applications',
+        'B.Com'    => 'Bachelor of Commerce',
+        'B.Com CA' => 'Bachelor of Commerce, Computer Applications',
+        'B.Com PA' => 'Bachelor of Commerce, Professional Accounting',
+        'M.Sc.'    => 'Master of Science',
+    ];
+    return isset($map[$award]) ? $map[$award] : '';
+}
+
+/** Group a department's programmes by the award they lead to, keeping source order. */
+function group_by_award(array $programmes)
+{
+    $groups = [];
+    foreach ($programmes as $p) {
+        [$award, $spec, $note] = split_programme($p);
+        $key = $award !== '' ? $award : 'Other';
+        if (!isset($groups[$key])) {
+            $groups[$key] = [];
+        }
+        $groups[$key][] = [$spec, $note];
+    }
+    return $groups;
+}
 ?>
 
 <!-- ============ Hero ============ -->
@@ -165,16 +229,27 @@ $ugTotal = array_sum(array_map(function ($d) { return count($d[5]); }, $departme
                             </div>
                         </div>
                     <?php else: ?>
-                        <div class="course-deck">
-                            <?php foreach ($progs as $n => $p): ?>
-                                <div class="course-card-tile">
-                                    <div class="course-card-tile__top">
-                                        <span class="course-card-tile__num"><?= sprintf('%02d', $n + 1) ?></span>
-                                        <span class="course-card-tile__icon"><?= icon('arrow-up-right') ?></span>
+                        <div class="award-tracks">
+                            <?php foreach (group_by_award($progs) as $award => $items): ?>
+                                <section class="track">
+                                    <div class="track__award">
+                                        <p class="track__abbr"><?= e($award) ?></p>
+                                        <?php if ($full = award_full($award)): ?>
+                                            <p class="track__full"><?= e($full) ?></p>
+                                        <?php endif; ?>
+                                        <p class="track__count"><?= count($items) ?> <?= count($items) === 1 ? 'pathway' : 'pathways' ?></p>
                                     </div>
-                                    <h4 class="course-card-tile__name"><?= e($p) ?></h4>
-                                    <span class="course-card-tile__dept"><?= e($name) ?></span>
-                                </div>
+                                    <ul class="track__list">
+                                        <?php foreach ($items as [$spec, $note]): ?>
+                                            <li class="track__item">
+                                                <span class="track__spec"><?= e($spec) ?></span>
+                                                <?php if ($note !== ''): ?>
+                                                    <span class="track__note"><?= e($note) ?></span>
+                                                <?php endif; ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </section>
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
