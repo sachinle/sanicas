@@ -47,8 +47,10 @@ $lms = [
 $libraryStats = [['4000', '+', 'Books'], ['80', '', 'Periodicals'], ['120', '', 'Seats'], ['Wi-Fi', '', 'Enabled']];
 $libraryTopics = ['Life Sciences', 'Computer Science', 'Business & Management', 'Languages', 'Mathematics', 'National Dailies'];
 
-// Rows supplied by the Sports department; placeholders until then.
-$achievements = array_fill(0, 3, ['[Achievement]', '[Student / Team]', '[Event]', '[Year]']);
+// Sporting achievements
+$achievements = [
+    ['Badminton Singles Champion', 'R. Shibu (II Year – BBA Logistics)', 'CM Trophy', '2026'],
+];
 ?>
 
 <!-- ============ Hero ============ -->

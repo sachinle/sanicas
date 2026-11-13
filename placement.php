@@ -9,7 +9,8 @@ $logos = ['247ai', 'accenture', 'acidus', 'adam-eve', 'adams-bridge', 'amazon', 
     'cognizant', 'deloitte', 'emerald', 'ibm', 'infosys', 'intellipaat', 'interz-learn', 'joyallukkas', 'justdial',
     'kg-invicta', 'kovai-co', 'logo-101', 'logo-102', 'namecheap', 'paytm', 'qbss', 'quadra', 'rinex', 'rnd-soft',
     'sagility', 'savvy', 'sbi-general', 'shriram', 'sprout', 'sutherland', 'sun-info-media', 'tech-mahindra', 'v-think',
-    'vivnovation', 'value-health', 'vedantu', 'westside', 'wipro', 'zigo', 'zeptologic'];
+    'vivnovation', 'value-health', 'vedantu', 'westside', 'wipro', 'zigo', 'zeptologic',
+    'aabasoft', 'maiyyam', 'pepagora', 'rently', 'skill-lync', 'spellzee', 'techmatrix-ai', 'tech-vedhu'];
 $stripLogos = array_slice($logos, 0, 16);
 
 $stages = [
@@ -33,10 +34,15 @@ $stages = [
     ]],
 ];
 
-// Figures the Placement Cell will provide — "—" until then. [label, tone, wide]
+// Placement statistics [label, value, tone]
 $stats = [
-    ['Total students placed', 'ochre'], ['Placement percentage', 'ink'], ['Highest package', 'sage'], ['Average package', 'terra'],
-    ['Number of companies visited', 'paper'], ['Internship statistics', 'ochre-soft'], ['Year-wise placement data', 'ink'],
+    ['Total students placed', '200+', 'ochre'],
+    ['Placement percentage', '99%', 'ink'],
+    ['Highest package', '15 LPA', 'sage'],
+    ['Average package', '3.50 LPA', 'terra'],
+    ['Number of companies visited', '150+', 'paper'],
+    ['Internship statistics', '50+', 'ochre-soft'],
+    ['Year-wise placement data', '2026', 'ink'],
 ];
 
 $trainings = [
@@ -48,7 +54,7 @@ $processLogos = ['accenture', 'infosys', 'cognizant', 'wipro', 'capgemini', 'ato
 
 // Information slots — "—" marks data the Placement Cell will provide.
 $detailSlots = [
-    ['Placement Drives', ['Upcoming drives', 'Ongoing drives', 'Completed drives', 'Drive date, company, eligibility and position']],
+    // ['Placement Drives', ['Upcoming drives', 'Ongoing drives', 'Completed drives', 'Drive date, company, eligibility and position']],
     ['Internships', ['Internship opportunities', 'Number of students completing internships', 'Internship partners', 'Internship highlights']],
     ['Student Achievements', ['Students placed', 'Company and designation', 'Package received', 'Student testimonials']],
     ['Placement Officers / Team', ['Placement Officer', 'Faculty coordinators', 'Contact details', 'Department-wise placement coordinators']],
@@ -127,12 +133,12 @@ function slot_card($title, $rows, $extra = '')
         <div class="pstats reveal">
             <div class="pstats__head">
                 <h3 class="h3">Placement Statistics</h3>
-                <?= chip('Should be given by the department', 'light') ?>
+                <?= chip('Batch 2026', 'light') ?>
             </div>
             <div class="pstats__grid">
-                <?php foreach ($stats as $i => [$label, $tone]): ?>
+                <?php foreach ($stats as $i => [$label, $val, $tone]): ?>
                     <div class="pstat pstat--<?= $tone ?><?= $i >= 4 ? ' pstat--wide' : '' ?>">
-                        <span class="pstat__val">—</span>
+                        <span class="pstat__val"><?= e($val) ?></span>
                         <span class="pstat__label"><?= e($label) ?></span>
                     </div>
                 <?php endforeach; ?>
@@ -245,11 +251,12 @@ function slot_card($title, $rows, $extra = '')
                 <span class="logo-tile reveal"><img src="<?= fig("co-$l.png") ?>" alt="Recruiter logo" loading="lazy"></span>
             <?php endforeach; ?>
         </div>
-        <p class="caption muted recruiters__note">Recruiter logos supplied by SANICAS. Logos are the property of their respective owners.</p>
+        <p class="caption muted recruiters__note"></p>
     </div>
 </section>
 
 <!-- ============ Placement details ============ -->
+<?php /*
 <section class="section section--tight-top bg-cream">
     <div class="wrap">
         <div class="section-head">
@@ -264,5 +271,6 @@ function slot_card($title, $rows, $extra = '')
         <p class="caption muted details__note">“—” marks data the Placement Cell will provide.</p>
     </div>
 </section>
+*/ ?>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

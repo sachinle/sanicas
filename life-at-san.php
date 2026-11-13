@@ -313,6 +313,7 @@ function lf_banner($lead, $accent)
             <?php endforeach; ?>
         </div>
 
+        <?php /*
         <div class="blog-panel">
             <div class="pg-head">
                 <div class="pg-head__title">
@@ -335,6 +336,7 @@ function lf_banner($lead, $accent)
                 <?php endforeach; ?>
             </div>
         </div>
+        */ ?>
 
         <div class="contribute reveal">
             <div class="contribute__title">

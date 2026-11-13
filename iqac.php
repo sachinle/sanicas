@@ -8,7 +8,7 @@ require_once __DIR__ . '/includes/extra-icons.php';
 
 $tabs = [
     'About' => 'about', 'Aim' => 'aim', 'Objectives' => 'objectives', 'Quality Policy' => 'quality-policy',
-    'Composition' => 'composition', 'Documents' => 'documents', 'Contact' => 'contact',
+    'Composition' => 'composition', /* 'Documents' => 'documents', */ 'Contact' => 'contact',
 ];
 
 $stakeholders = ['Students', 'Faculty', 'Alumni', 'Parents', 'Employers', 'Industry', 'Management'];
@@ -88,7 +88,7 @@ function q_link($l, $class = 'q-link')
             <div><strong>09</strong><span>Quality policy commitments</span></div>
         </div>
         <a class="q-link q-link--terra" href="#quality-policy"><span class="q-link__text"><strong>Quality Policy</strong></span><span class="q-link__disc"><?= icon('arrow-up-right') ?></span></a>
-        <a class="q-link q-link--sage" href="#documents"><span class="q-link__text"><strong>IQAC Documents</strong><span>AQAR · Minutes · Reports</span></span><span class="q-link__disc"><?= icon('arrow-up-right') ?></span></a>
+        <?php /* <a class="q-link q-link--sage" href="#documents"><span class="q-link__text"><strong>IQAC Documents</strong><span>AQAR · Minutes · Reports</span></span><span class="q-link__disc"><?= icon('arrow-up-right') ?></span></a> */ ?>
     </div>
 </section>
 
@@ -220,6 +220,7 @@ function q_link($l, $class = 'q-link')
 </section>
 
 <!-- ============ Documents ============ -->
+<?php /*
 <section class="iq-docs page-anchor" id="documents">
     <div class="wrap iq-docs__row">
         <div class="doc-board">
@@ -247,6 +248,7 @@ function q_link($l, $class = 'q-link')
         </div>
     </div>
 </section>
+*/ ?>
 
 <!-- ============ Contact ============ -->
 <section class="iq-contact page-anchor" id="contact">
