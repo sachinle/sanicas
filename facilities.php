@@ -50,6 +50,7 @@ $libraryTopics = ['Life Sciences', 'Computer Science', 'Business & Management', 
 // Sporting achievements
 $achievements = [
     ['Badminton Singles Champion', 'R. Shibu (II Year – BBA Logistics)', 'CM Trophy', '2026'],
+    ["C' Zone Football Tournament (IV Place)", 'Football Team', "Bharathiar University Inter-College 'C' Zone Football Tournament", '2026'],
 ];
 ?>
 
@@ -370,9 +371,9 @@ $achievements = [
                     <span class="visit-item__ico"><?= fac_icon('pin') ?></span>
                     <span><small>Address</small><strong>ACC Pirivu, Navakkarai, Coimbatore - 641 105</strong></span>
                 </a>
-                <a class="visit-item" href="tel:+917306868607">
+                <a class="visit-item" href="<?= e($SITE['phone_href']) ?>">
                     <span class="visit-item__ico"><?= fac_icon('phone') ?></span>
-                    <span><small>Phone</small><strong>+91 73068 68607</strong></span>
+                    <span><small>College Office</small><strong><?= e($SITE['phone']) ?></strong></span>
                 </a>
                 <a class="visit-item" href="<?= e($SITE['email_href']) ?>">
                     <span class="visit-item__ico"><?= fac_icon('mail') ?></span>

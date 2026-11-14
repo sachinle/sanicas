@@ -71,8 +71,7 @@ function adm_select($label, $name, $options, $form, $errors, $req = false, $plac
 function prog_card($name, $courses, $extraClass = '')
 {
     $html = '<article class="dept-card ' . e($extraClass) . ' reveal"><div class="dept-card__head">'
-        . '<h3 class="dept-card__title">' . e($name) . '</h3>'
-        . '<span class="dept-card__count">' . sprintf('%02d', count($courses)) . '</span></div><ul class="dept-card__list">';
+        . '<h3 class="dept-card__title">' . e($name) . '</h3></div><ul class="dept-card__list">';
     foreach ($courses as $c) {
         $html .= '<li><span class="dept-card__dot"></span>' . e($c) . '</li>';
     }
@@ -145,7 +144,7 @@ $ugCount = array_sum(array_map('count', $ugDepartments));
                 <?= chip('Programme details', 'sage') ?>
                 <h2 class="h2 accent-terra">Programmes for <em class="serif">2026–27</em> admission</h2>
             </div>
-            <p class="section-head__text">Undergraduate and postgraduate degrees, a diploma, add-on courses and certificate courses. For admission assistance call the Admission Hotline <a class="adm-link" href="tel:+917306868607">+91 73068 68607</a> or email <a class="adm-link" href="mailto:Info@sanicas.in">Info@sanicas.in</a>.</p>
+            <p class="section-head__text">Undergraduate and postgraduate degrees, add-on courses and certificate courses. For admission assistance call the Admission Hotline <a class="adm-link" href="tel:+917306868607">+91 73068 68607</a> or email <a class="adm-link" href="mailto:Info@sanicas.in">Info@sanicas.in</a>.</p>
         </div>
 
         <div class="prog-group">
@@ -162,13 +161,12 @@ $ugCount = array_sum(array_map('count', $ugDepartments));
 
         <div class="prog-group">
             <div class="prog-group__head">
-                <h3 class="prog-group__title">Postgraduate Programme &amp; Diploma</h3>
+                <h3 class="prog-group__title">Postgraduate Programme</h3>
             </div>
             <div class="dept-grid">
                 <?php foreach ($PROGRAMMES['Postgraduate'] as $name => $courses): ?>
                     <?= prog_card($name, $courses, 'dept-card--pg') ?>
                 <?php endforeach; ?>
-                <?= prog_card('Diploma Course', $PROGRAMMES['Diploma']['Diploma Course'], 'dept-card--ochre') ?>
             </div>
         </div>
 

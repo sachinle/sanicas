@@ -172,8 +172,8 @@ $milestones = [
         <div class="trustee-duo">
             <article class="trustee-card reveal">
                 <div class="trustee-card__top">
-                    <div class="trustee-card__media trustee-card__media--avatar">
-                        <span class="avatar avatar--ochre avatar--xl">TG</span>
+                    <div class="trustee-card__media">
+                        <img src="<?= fig('giri.png') ?>" alt="Ar. T. Giri, Secretary / Trustee" loading="lazy">
                     </div>
                     <div class="trustee-card__ident">
                         <?= chip('Secretary & Trustee', 'ochre') ?>

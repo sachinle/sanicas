@@ -11,8 +11,8 @@ $__base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/');
 define('BASE_URL', $__base === '' ? '' : $__base);
 
 $SITE = [
-    'phone'      => '+91 9943098810',
-    'phone_href' => 'tel:+919943098810',
+    'phone'      => '+91 73068 68607',
+    'phone_href' => 'tel:+917306868607',
     'email'      => 'Info@sanicas.in',
     'email_href' => 'mailto:Info@sanicas.in',
     'instagram'  => '@sanicas.cbe',

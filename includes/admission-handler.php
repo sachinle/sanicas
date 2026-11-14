@@ -40,9 +40,11 @@ $PROGRAMMES = [
     'Postgraduate' => [
         'Department of Microbiology' => ['M.Sc. Microbiology'],
     ],
+    /*
     'Diploma' => [
         'Diploma Course' => ['Diploma in Yoga for Human Excellence'],
     ],
+    */
     'Add-on course' => [
         'Add-on Courses' => [
             'AI Prompt Engineering',

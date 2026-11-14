@@ -110,10 +110,31 @@
 .iq-composition { padding: 128px var(--gutter); }
 .iq-composition .lead-pair { margin-bottom: 12px; }
 .comp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.comp { background: var(--paper); border-radius: 22px; padding: 16px; display: flex; gap: 14px; align-items: center; }
-.comp > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.comp__num { width: 40px; height: 40px; border-radius: 50%; background: var(--cream-2); display: grid; place-items: center; flex: none; font-size: 13px; color: var(--muted); }
-.comp__name { font-size: 16px; font-weight: 600; line-height: 1.2; color: var(--muted); }
+.comp { background: var(--paper); border-radius: 22px; padding: 18px 16px; display: flex; gap: 14px; align-items: flex-start; }
+.comp__info { display: flex; flex-direction: column; gap: 6px; min-width: 0; flex: 1; }
+.comp__num { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; flex: none; font-size: 13px; font-weight: 700; margin-top: 2px; }
+.comp__num--ochre { background: var(--ochre-soft); color: var(--ink); }
+.comp__num--sage  { background: var(--sage-soft);  color: var(--ink); }
+.comp__num--terra { background: var(--terracotta-soft); color: var(--ink); }
+.comp__num--ink   { background: var(--ink); color: var(--cream); }
+
+.comp__name { font-size: 15.5px; font-weight: 700; line-height: 1.25; color: var(--ink); margin: 0; }
+.comp__info .caption { margin: 0; font-size: 13px; line-height: 1.35; color: var(--muted); }
+
+.comp__badge {
+    display: inline-flex; align-items: center;
+    padding: 3px 10px; border-radius: 999px;
+    font-size: 11px; font-weight: 700; line-height: 1.3;
+    letter-spacing: 0.03em; text-transform: uppercase;
+    width: fit-content;
+}
+.comp__badge--ochre { background: var(--ochre-soft); color: var(--ink); }
+.comp__badge--sage  { background: var(--sage-soft);  color: var(--ink); }
+.comp__badge--terra { background: var(--terracotta-soft); color: var(--ink); }
+.comp__badge--ink   { background: var(--ink); color: var(--cream); }
+
+/* Center the 16th card in the 3-column desktop grid */
+.comp:last-child { grid-column: 2; }
 
 /* Documents */
 .iq-docs { background: var(--paper); padding: 128px var(--gutter) 64px; }
@@ -160,6 +181,7 @@
 }
 @media (max-width: 1080px) {
     .policy-grid, .comp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .comp:last-child { grid-column: auto; }
 }
 @media (max-width: 900px) {
     .aim-row, .aim-text { flex-direction: column; }

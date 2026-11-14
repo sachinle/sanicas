@@ -41,11 +41,25 @@ $policy = [
     ['Transparency & Accountability', 'Stakeholder satisfaction and compliance with applicable statutory and regulatory requirements.', 'scale'],
 ];
 
-// Placeholder names, as in the design — replace [Name] with the nominated members.
+// IQAC Composition members (16 nominated members; Chairperson & Coordinator featured above)
+// [name, designation, role, categoryTone]
 $composition = [
-    'Management Representative', 'Senior Administrative Officer', 'Teacher Representative',
-    'Teacher Representative', 'Teacher Representative', 'Local Society Nominee',
-    'Alumni Representative', 'Employer / Industrialist', 'Student Representative',
+    ['Adv. T. Balakumar', 'Managing Director', 'Management Representative', 'ochre'],
+    ['Dr. Kavipriya S', 'Vice Principal', 'Faculty Member', 'sage'],
+    ['Mr. A. Ranganathan', 'Asst. Prof., Dept. of Mathematics (COE)', 'Faculty Member', 'sage'],
+    ['Dr. Jenifer Jincy T', 'Asst. Prof., Dept. of Microbiology', 'Faculty Member', 'sage'],
+    ['Dr. V. Sasikumar', 'Asst. Prof., Dept. of Tamil', 'Faculty Member', 'sage'],
+    ['Mr. M. Gnanasekaran', 'Asst. Prof., Dept. of Mathematics', 'Faculty Member', 'sage'],
+    ['Mrs. Sruthi S', 'Asst. Prof., Dept. of Computer Science & Applications', 'Faculty Member', 'sage'],
+    ['Mr. Sanu R', 'Asst. Prof., Dept. of BBA', 'Faculty Member', 'sage'],
+    ['Mrs. Sheeja V. V.', 'Asst. Prof., Dept. of Commerce', 'Faculty Member', 'sage'],
+    ['Mrs. Meera Nair', 'Asst. Prof., Dept. of English', 'Faculty Member', 'sage'],
+    ['Mrs. Indrapriyadarshini', 'Chief Administrative Officer (CAO)', 'Senior Administrative Officer', 'terra'],
+    ['Mr. Sai Kiran', 'Industry Representative', 'Employer / Industry Representative', 'ink'],
+    ['Mr. Maheswaran', 'Founder, Namma Navakkarai (NGO)', 'Local Society Representative', 'terra'],
+    ['Dr. K. Ramamurthy', 'Senior Academician', 'External Expert', 'ink'],
+    ['Niveditha G', 'Microbiologist, KMCH', 'Alumni Representative', 'sage'],
+    ['Siva K', 'III BBA CA, Student Member', 'Student Representative', 'ochre'],
 ];
 
 // Placeholder dates/links, as in the design — replace with the published documents.
@@ -204,16 +218,23 @@ function q_link($l, $class = 'q-link')
         <div class="lead-pair">
             <div class="lead-tile lead-tile--ochre reveal">
                 <span class="ini ini--lg">ST</span>
-                <div><p class="overline">Chairperson · Principal</p><p class="h3">Dr. S. Thenral</p><p class="caption lead-tile__sub">SAN International College of Arts and Science</p></div>
+                <div><p class="overline">Chairperson · Principal</p><p class="h3">Dr. S. Thenral</p><p class="caption lead-tile__sub">Principal, SAN International College of Arts and Science</p></div>
             </div>
             <div class="lead-tile lead-tile--ink reveal">
                 <span class="ini ini--lg">DV</span>
-                <div><p class="overline">IQAC Coordinator</p><p class="h3">Dr. Dhanya V</p><p class="caption lead-tile__sub">Department of Microbiology</p></div>
+                <div><p class="overline">IQAC Coordinator</p><p class="h3">Dr. Dhanya V</p><p class="caption lead-tile__sub">Asst. Prof. &amp; Head, Dept. of Microbiology</p></div>
             </div>
         </div>
         <div class="comp-grid">
-            <?php foreach ($composition as $k => $role): ?>
-                <div class="comp"><span class="comp__num"><?= sprintf('%02d', $k + 1) ?></span><div><p class="comp__name">[Name]</p><p class="caption muted"><?= e($role) ?> · Member</p></div></div>
+            <?php foreach ($composition as $k => [$name, $desig, $role, $tone]): ?>
+                <div class="comp">
+                    <span class="comp__num comp__num--<?= $tone ?>"><?= sprintf('%02d', $k + 1) ?></span>
+                    <div class="comp__info">
+                        <span class="comp__badge comp__badge--<?= $tone ?>"><?= e($role) ?></span>
+                        <p class="comp__name"><?= e($name) ?></p>
+                        <p class="caption muted"><?= e($desig) ?></p>
+                    </div>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
@@ -262,6 +283,7 @@ function q_link($l, $class = 'q-link')
             <div class="iq-contact__details">
                 <div class="iq-detail"><span class="iq-detail__disc"><?= icon('users') ?></span><div><p class="overline">IQAC Coordinator</p><p class="iq-detail__value">Dr. Dhanya V</p></div></div>
                 <div class="iq-detail"><span class="iq-detail__disc"><?= icon('map-pin') ?></span><div><p class="overline">Address</p><p class="iq-detail__value">ACC Pirivu, Navakkarai, Coimbatore - 641 105</p></div></div>
+                <a class="iq-detail" href="<?= e($SITE['phone_href']) ?>"><span class="iq-detail__disc"><?= icon('phone') ?></span><div><p class="overline">College Office</p><p class="iq-detail__value"><?= e($SITE['phone']) ?></p></div></a>
                 <div class="iq-detail"><span class="iq-detail__disc"><?= icon('mail') ?></span><div><p class="overline">Email</p><p class="iq-detail__value">[IQAC email address]</p></div></div>
             </div>
         </div>

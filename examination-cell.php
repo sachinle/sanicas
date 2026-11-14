@@ -277,10 +277,10 @@ function uni_link($l)
                     <span class="detail__disc"><?= icon('map-pin') ?></span>
                     <div><p class="overline">Address</p><p class="detail__value">ACC Pirivu, Navakkarai, Coimbatore - 641 105</p></div>
                 </div>
-                <div class="detail">
+                <a class="detail" href="<?= e($SITE['phone_href']) ?>">
                     <span class="detail__disc"><?= icon('phone') ?></span>
-                    <div><p class="overline">Phone</p><p class="detail__value detail__value--muted">[Phone number]</p></div>
-                </div>
+                    <div><p class="overline">College Office</p><p class="detail__value"><?= e($SITE['phone']) ?></p></div>
+                </a>
                 <a class="detail" href="mailto:sancoe2023@gmail.com">
                     <span class="detail__disc"><?= icon('mail') ?></span>
                     <div><p class="overline">Email</p><p class="detail__value">sancoe2023@gmail.com</p></div>

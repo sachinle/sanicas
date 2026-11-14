@@ -23,7 +23,7 @@ function field_error($errors, $key)
             <div class="contact-tiles">
                 <a class="contact-tile contact-tile--ochre" href="<?= e($SITE['phone_href']) ?>">
                     <span class="contact-tile__icon"><?= icon('phone') ?></span>
-                    <span class="contact-tile__text"><span class="overline">Call us</span><span class="h4"><?= e($SITE['phone']) ?></span></span>
+                    <span class="contact-tile__text"><span class="overline">College Office</span><span class="h4"><?= e($SITE['phone']) ?></span></span>
                     <span class="contact-tile__go"><?= icon('arrow-up-right') ?></span>
                 </a>
                 <a class="contact-tile contact-tile--terra" href="<?= e($SITE['email_href']) ?>">

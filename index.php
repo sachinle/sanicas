@@ -148,9 +148,9 @@ $support = [
                     <span class="welcome-card__icon"><?= icon('book') ?></span>
                 </div>
                 <div class="welcome-card__value">
-                    <p class="stat" data-count="12">12</p>
+                    <p class="stat" data-count="11">11</p>
                 </div>
-                <p class="body-s welcome-card__desc">10 UG programs, 1 PG program and 1 diploma course across 6 departments</p>
+                <p class="body-s welcome-card__desc">10 UG programs and 1 PG program across 6 departments</p>
             </div>
 
             <!-- 04. Collaborations (Default Sage Soft Green) -->
