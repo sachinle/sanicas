@@ -486,7 +486,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .milestone {
@@ -494,19 +494,17 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
+    min-height: 150px;
 }
 
 .milestone .body-s {
-    margin-top: -8px;
+    margin-top: 0;
     color: rgba(18, 19, 16, .8);
 }
 
 .milestone__dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--ink);
+    display: none;
 }
 
 .milestone--ochre {

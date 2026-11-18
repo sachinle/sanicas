@@ -16,8 +16,9 @@ $academics = [
 
 $support = [
     ['Pre-Placement Training', 'Tailored resume-building, interview preparation, and soft skills development to ensure you’re ready to impress employers.', 'ochre'],
-    ['Industry Networking', 'Access to a wide network of industry professionals and re
-    cruiters through campus recruitment drives, career fairs, and networking events.', 'terra'],
+    ['Industry Networking', 'Access to a wide network of industry professionals and recruiters 
+
+     through campus recruitment drives, career fairs, and networking events.', 'terra'],
     ['Internship Opportunities', 'Real-world experience through internships with leading companies, giving you the competitive edge in the job market.', 'sage'],
     ['Job Placements', 'Continuous placement assistance, including interview coordination, job recommendations, and post-placement support.', 'ochre-soft'],
 ];
@@ -28,7 +29,7 @@ $support = [
     <div class="hero__bg"><img src="<?= fig('home-hero.jpg') ?>" alt="Aerial view of the SANICAS campus in Walayar, Coimbatore" fetchpriority="high"></div>
     <div class="hero__row">
         <div class="hero__content">
-            <?= chip('Welcome to SANICAS · Coimbatore', 'glass') ?>
+            <?= chip('Welcome to SANICAS , Coimbatore', 'glass') ?>
             <h1 class="display">Learn. Lead. <em class="serif">Succeed.</em></h1>
             <p class="lead hero__lead">A comprehensive array of programs designed to guide you toward success — a strong curriculum blending academic excellence with personalized support.</p>
             <div class="btn-row">
@@ -74,9 +75,9 @@ $support = [
         <div class="welcome__header-center reveal">
             <?= chip('Welcome to SANICAS', 'ochre') ?>
             <div class="welcome__accreditations">
-                <span class="welcome__accreditation-item">Affiliated to Bharathiar University</span>
+                <span class="welcome__accreditation-item">Affiliated with Bharathiar University</span>
                 <span class="welcome__accreditation-dot">&bull;</span>
-                <span class="welcome__accreditation-item">Approved by Govt. of Tamil Nadu</span>
+                <span class="welcome__accreditation-item">Approved by Govt of Tamil Nadu</span>
                 <span class="welcome__accreditation-dot">&bull;</span>
                 <span class="welcome__accreditation-item">UGC Recognized</span>
             </div>
@@ -90,7 +91,7 @@ $support = [
         <!-- Institutional Narrative (Center Aligned) -->
         <div class="welcome__narrative reveal">
             <p class="welcome__lead">
-                Welcome to SANICAS, where academic excellence meets real-world readiness. Backed by Sree Amman Trust’s three-decade legacy, we provide career-focused undergraduate and postgraduate education designed to nurture ethical, competent, and forward-thinking leaders.
+                Welcome to SANICAS, where academic excellence meets real-world readiness. Backed by Sree Amman Trust’s four-decade legacy, we provide career-focused undergraduate and postgraduate education designed to nurture ethical, competent, and forward-thinking leaders.
             </p>
             <p class="welcome__subtext">
                 Our curriculum blends rigorous academic theory with hands-on technical training, personalized faculty mentorship, and comprehensive career readiness — empowering every student to shape their future with clarity, confidence, and purpose.
@@ -129,7 +130,7 @@ $support = [
                 <div class="welcome-card__value">
                     <p class="stat">Since 1986</p>
                 </div>
-                <p class="body-s welcome-card__desc">Sree Amman Trust — over three decades of educational excellence and leadership</p>
+                <p class="body-s welcome-card__desc">Sree Amman Trust — over four decades of educational excellence and leadership</p>
             </div>
 
             <!-- 02. Campus Visual Tile (Aerial Image) -->
@@ -150,7 +151,7 @@ $support = [
                 <div class="welcome-card__value">
                     <p class="stat" data-count="11">11</p>
                 </div>
-                <p class="body-s welcome-card__desc">10 UG programs and 1 PG program across 6 departments</p>
+                <p class="body-s welcome-card__desc">12 UG programs and 1 PG program across 6 departments</p>
             </div>
 
             <!-- 04. Collaborations (Default Sage Soft Green) -->
@@ -226,7 +227,7 @@ $support = [
     <div class="learning-card">
         <div class="learning-card__media">
             <img src="<?= fig('images (2)/infra and labs/infra_and_labs (14).jpeg') ?>" alt="Students working on laptops in a SANICAS classroom" loading="lazy">
-            <span class="first-badge"><span class="first-badge__disc">1st</span>First time in Tamil Nadu</span>
+            <span class="first-badge">First time in Tamil Nadu</span>
             <blockquote class="learning-card__quote">We are committed to empowering our students with the tools and knowledge required for success in a tech-driven world.</blockquote>
         </div>
         <div class="learning-card__text">

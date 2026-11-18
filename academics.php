@@ -38,7 +38,7 @@ $departments = [
         'slug' => 'computer-science', 'name' => 'Computer Science & Application', 'img' => 'images/Copy of 255A4774.JPG', 'mission_tone' => 'sage',
         'intro' => 'To provide students with fundamental knowledge of computer science an develop their technical, programming, problem-solving, and analytical skills.',
         'courses_label' => 'Courses in Department',
-        'courses' => ['BSc CS', 'BCA', 'AI & ML', 'B.Sc. IT'],
+        'courses' => ['B.Sc CS', 'BCA', 'AI & ML', 'B.Sc. IT'],
         'hod' => 'Mrs. Sruthi S', 'hod_initials' => 'SS',
         'vision' => 'To be a center of excellence in Computer Science and Applications by providing quality education, fostering innovation and research, and developing skilled, ethical, and socially responsible professionals to meet the challenges of a dynamic global society.',
         'mission' => [

@@ -15,7 +15,7 @@ $stripLogos = array_slice($logos, 0, 16);
 
 $stages = [
     ['Pre-Placement Preparation', 'ochre', [
-        ['Personalized Counseling', 'Each student receives one-on-one career counseling, where we help identify their strengths, interests, and career goals. This process ensures that students are aligned with industries and roles suited to their skills and aspirations.'],
+        ['Personalized Counseling', 'Each student receives one-to-one career counseling, where we help identify their strengths, interests, and career goals. This process ensures that students are aligned with industries and roles suited to their skills and aspirations.'],
         ['Resume Building & Interview Preparation', 'We assist students in crafting professional resumes that highlight their skills and experiences. In addition, our mock interview sessions prepare them for real-world interviews, focusing on industry-specific questions and job readiness.'],
         ['Soft Skills Training', 'In today’s competitive job market, soft skills are just as important as technical knowledge. We offer training in communication, teamwork, leadership, and problem-solving to help students develop the interpersonal skills needed to excel in their careers.'],
     ]],
@@ -39,8 +39,9 @@ $stats = [
     ['Total students placed', '200+', 'ochre'],
     ['Placement percentage', '99%', 'ink'],
     ['Highest package', '15 LPA', 'sage'],
-    ['Average package', '3.50 LPA', 'terra'],
-    ['Number of companies visited', '150+', 'paper'],
+    ['Average package', '3.5 LPA', 'terra'],
+    ['Number of companies that participated
+', '150+', 'paper'],
     ['Internship statistics', '50+', 'ochre-soft'],
     ['Year-wise placement data', '2026', 'ink'],
 ];

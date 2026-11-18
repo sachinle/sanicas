@@ -96,7 +96,7 @@ $totalPubs = array_sum(array_map($deptCount, $publications));
         <?= chip('SAN International College of Arts and Science', 'glass') ?>
         <h1 class="rs-hero__title">Research <span class="serif">&amp; Development</span></h1>
         <p class="lead">A well-defined system that nurtures a vibrant research culture — planning, coordinating and encouraging research, innovation, consultancy and publication across the college.</p>
-        <div class="chip-row"><?= chip('Affiliated to Bharathiar University', 'glass') ?><?= chip($totalPubs . ' publications', 'glass') ?></div>
+        <div class="chip-row"><?= chip('Affiliated with Bharathiar University', 'glass') ?><?= chip($totalPubs . ' publications', 'glass') ?></div>
     </div>
     <div class="rs-hero__visual reveal">
         <img class="rs-hero__img" src="<?= fig('images/Copy of 255A5262.JPG') ?>" alt="Research &amp; Development at SANICAS" fetchpriority="high">
@@ -148,7 +148,7 @@ $totalPubs = array_sum(array_map($deptCount, $publications));
         <div class="pg-head">
             <div class="pg-head__title">
                 <?= chip('R&D Cell', 'ochre') ?>
-                <h2 class="h2">What the Cell Does</h2>
+                <h2 class="h2">Functions of the R&D Cell</h2>
             </div>
             <p class="body-s muted">From faculty publications to student hackathons, the Cell connects every stage of research — idea, guidance, collaboration and outcome.</p>
         </div>

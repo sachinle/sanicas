@@ -34,7 +34,7 @@ $asapCount = count(array_filter($programs, function ($p) { return $p[2]; }));
                 <div class="spot-sticker"><strong>1st</strong><span>college in<br>Coimbatore</span></div>
             </div>
             <div class="spot-text">
-                <?= chip('Industry Oriented Programs Collaboration', 'ochre') ?>
+                <?= chip('Industry-Oriented Programs Collaboration', 'ochre') ?>
                 <h2 class="h2 accent-terra">XYLEM Commerce <em class="serif">Pro</em></h2>
                 <p class="body">XYLEM Commerce Pro is a renowned institution specializing in providing high-quality professional courses in the fields of accounting, finance, and business management. Known for its expert-led training programs, XYLEM Commerce Pro focuses on preparing students for globally recognized certifications such as ACCA (Association of Chartered Certified Accountants) and CMA (Certified Management Accountant – US).</p>
                 <p class="body-s muted">With a reputation for excellence in the education sector, XYLEM Commerce Pro partners with top educational institutions across the country to offer students access to world-class professional training, resources, and mentorship. Their expert faculty, industry connections, and comprehensive curriculum ensure that students are not just prepared for exams, but are also equipped with the real-world skills required to excel in the global job market.</p>
@@ -139,7 +139,7 @@ $asapCount = count(array_filter($programs, function ($p) { return $p[2]; }));
         <h2 class="h1 accent-ochre">Empowering students for <em class="serif">success</em></h2>
         <p class="body">The partnership between ASAP Kerala and SANICAS marks a significant milestone in the journey of skill development for students in Tamil Nadu. With ASAP Kerala’s proven track record in training and certification, SANICAS provides its students with a unique opportunity to enhance their career prospects and become leaders in their respective fields.</p>
         <p class="lead">Join SANICAS and take advantage of this exceptional collaboration with ASAP Kerala to unlock your potential and secure a successful future.</p>
-        <?= btn(' us', url('contact.php'), 'primary') ?>
+        <?= btn('  Contact US', url('contact.php'), 'primary') ?>
     </div>
 </section>
 

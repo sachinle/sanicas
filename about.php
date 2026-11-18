@@ -10,7 +10,7 @@ $highlights = [
 ];
 $milestones = [
     ['1986', 'Founded by Tmt. T. Jayalakshmi, M.A.', 'ochre'],
-    ['3+ decades', 'A rich legacy in advancing education', 'terra'],
+    ['4+ decades', 'A rich legacy in advancing education', 'terra'],
     ['Erode & Coimbatore', 'Headquarters of the Trust', 'sage'],
     ['10', 'Esteemed institutions established by the Trust', 'ink'],
 ];
@@ -23,9 +23,9 @@ $milestones = [
         <h1 class="display accent-terra">About <em class="serif">SANICAS</em></h1>
         <p class="lead muted">SAN International College of Arts and Science (SANICAS), a premier educational institution under the esteemed Sree Amman Trust, is committed to fostering academic excellence and holistic development.</p>
         <div class="chip-row">
-            <?= chip('Affiliated · Bharathiar University', 'sage') ?>
-            <?= chip('Approved · Govt. of Tamil Nadu', 'ochre') ?>
-            <?= chip('Recognized · UGC', 'terra') ?>
+            <?= chip('Affiliated with Bharathiar University', 'sage') ?>
+            <?= chip('Approved by the Govt of Tamil Nadu', 'ochre') ?>
+            <?= chip('Recognized by UGC', 'terra') ?>
         </div>
     </div>
     <div class="about-bento">
@@ -65,10 +65,9 @@ $milestones = [
     <div class="wrap">
         <div class="section-head">
             <div class="section-head__title">
-                <?= chip('Why choose us', 'terra') ?>
                 <h2 class="h2 accent-ochre">About <em class="serif">us</em></h2>
             </div>
-            <p class="section-head__text">SAN International College of Arts and Science (SANICAS), a premier educational institution under the esteemed Sree Amman Trust, is committed to fostering academic excellence and holistic development. Located in Coimbatore, SANICAS is affiliated with Bharathiar University, Coimbatore, and approved by the Government of Tamil Nadu, as well as recognized by the University Grants Commission (UGC).</p>
+            <p class="section-head__text">SAN International College of Arts and Science (SANICAS), established under the esteemed Sree Amman Trust, is dedicated to promoting academic excellence and the holistic development of students. Located in Coimbatore, Tamil Nadu, SANICAS is affiliated with Bharathiar University and approved by the Government of Tamil Nadu. It is committed to providing quality education that nurtures knowledge, skills, creativity and professional growth.</p>
         </div>
 
         <div class="about-us__row">
@@ -126,7 +125,6 @@ $milestones = [
         <div class="milestones">
             <?php foreach ($milestones as [$big, $small, $tone]): ?>
                 <div class="milestone milestone--<?= $tone ?> reveal">
-                    <span class="milestone__dot"></span>
                     <p class="h3"><?= e($big) ?></p>
                     <p class="body-s"><?= e($small) ?></p>
                 </div>

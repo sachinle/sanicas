@@ -87,7 +87,7 @@ function q_link($l, $class = 'q-link')
 <section class="iq-hero">
     <div class="iq-hero__bg"><img src="<?= fig('images (2)/infra and labs/infra_and_labs (9).jpeg') ?>" alt="" fetchpriority="high"></div>
     <div class="iq-hero__text">
-        <?= chip('Inaugurated on 16 September 2025', 'glass') ?>
+        <?= chip('Inaugurated on 16th September 2025', 'glass') ?>
         <h1 class="display">Internal Quality <em class="serif">Assurance Cell</em></h1>
         <p class="body iq-hero__sub">IQAC · SAN International College of Arts and Science</p>
     </div>
@@ -95,7 +95,7 @@ function q_link($l, $class = 'q-link')
         <p class="overline">IQAC at a glance</p>
         <div class="glance__date">
             <span class="glance__disc"><?= icon('calendar') ?></span>
-            <span><strong>16 September 2025</strong><small>IQAC inaugurated</small></span>
+            <span><strong>16th September 2025</strong><small>IQAC inaugurated</small></span>
         </div>
         <div class="glance__stats">
             <div><strong>10</strong><span>Core objectives</span></div>
@@ -126,9 +126,8 @@ function q_link($l, $class = 'q-link')
             <p class="body-s muted">The IQAC facilitates outcome-based and learner-centric teaching-learning practices, organises workshops, seminars and faculty development programmes, promotes best practices, and encourages continuous improvement through stakeholder feedback and evidence-based evaluation.</p>
             <p class="body-s muted">The IQAC strives to contribute significantly towards academic excellence, institutional development and holistic student growth by fostering a culture of quality, innovation, accountability and continuous improvement.</p>
         </div>
-        <div class="photo-stack" aria-hidden="true">
-            <img class="photo-stack__a" src="<?= fig('images/DSC_5862-1-1536x1024.jpg') ?>" alt="" loading="lazy">
-            <img class="photo-stack__b" src="<?= fig('images/PRN06312.JPG') ?>" alt="" loading="lazy">
+        <div class="iq-about__media reveal">
+            <img src="<?= fig('iqac-office.jpeg') ?>" alt="Internal Quality Assurance Cell (IQAC) Office at SANICAS" loading="lazy">
             <span class="photo-badge"><span class="photo-badge__disc"><?= xicon('target') ?></span><span><strong>Quality first</strong><small>Plan · Implement · Monitor</small></span></span>
         </div>
     </div>

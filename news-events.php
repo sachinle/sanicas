@@ -14,7 +14,7 @@ $profile = $SITE['insta_href'];
  */
 $events = [
     [
-        'title' => 'Inter Department Football 5’s Tournament – 2026', 'day' => '30', 'month' => 'Sep 2026',
+        'title' => 'Inter-Department Football 5-a-Side Tournament – 2026', 'day' => '30', 'month' => 'Sep 2026',
         'cats' => '2026 sports', 'tag' => ['Sports', 'sage'], 'posters' => ['news-football-2026.jpg'],
         'meta' => 'Date: 30 September – 01 October 2026 · Time: 11:00 AM · Venue: SAN International College of Arts and Science, Coimbatore',
         'body' => 'SAN International College of Arts and Science organised an Inter Department Football 5’s Tournament on 30 September and 01 October 2026. The tournament provided an exciting platform for students from different departments to showcase their football skills, teamwork and sportsmanship. The event encouraged healthy competition, team spirit and active participation among the students. The tournament created an energetic sporting atmosphere on the campus and promoted the importance of physical fitness and team coordination.',
@@ -55,7 +55,7 @@ $events = [
     [
         'title' => 'Christmas Celebration – 2025', 'day' => '12', 'month' => 'Jul 2025',
         'cats' => '2025 festivals', 'tag' => ['Festival', 'terra'], 'posters' => ['news-christmas-2025.jpg'],
-        'meta' => 'Date: 12 July 2025',
+        'meta' => 'Date: Dec 2025',
         'body' => 'SAN International College of Arts and Science organised a Christmas Celebration to bring students and faculty members together in the spirit of joy, sharing and togetherness. The programme highlighted the values of love, peace, friendship and harmony. Students actively participated in the celebration, making the event a memorable campus occasion.',
         'reels' => ['Reel 1' => $profile, 'Reel 2' => $profile],
     ],

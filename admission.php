@@ -129,7 +129,7 @@ $ugCount = array_sum(array_map('count', $ugDepartments));
         <div class="adm-learning__text">
             <?= chip('Introducing', 'terra') ?>
             <h2 class="h2 accent-ochre">South India’s first fully <em class="serif">computerized learning system!</em></h2>
-            <p class="lead muted">@ SAN ICAS, experience the future of learning with Advanced SKILL BASED Education SYSTEM. We are revolutionizing education by offering each student a personalized computer, empowering them to thrive in the digital era.</p>
+            <p class="lead muted">@SAN ICAS, experience the future of learning with Advanced Skill Based Education System. We are revolutionizing education by offering each student a personalized computer, empowering them to thrive in the digital era.</p>
             <p class="adm-learning__tag">Step into the future—where learning meets innovation!</p>
         </div>
         <img class="adm-learning__img reveal" src="<?= fig('learning-system.jpg') ?>" alt="SANICAS students learning on personal computers" loading="lazy">
@@ -144,7 +144,7 @@ $ugCount = array_sum(array_map('count', $ugDepartments));
                 <?= chip('Programme details', 'sage') ?>
                 <h2 class="h2 accent-terra">Programmes for <em class="serif">2026–27</em> admission</h2>
             </div>
-            <p class="section-head__text">Undergraduate and postgraduate degrees, add-on courses and certificate courses. For admission assistance call the Admission Hotline <a class="adm-link" href="tel:+917306868607">+91 73068 68607</a> or email <a class="adm-link" href="mailto:Info@sanicas.in">Info@sanicas.in</a>.</p>
+            <p class="section-head__text">Explore Undergraduate and postgraduate degrees, add-on courses and certificate courses. For admission assistance call the Admission Hotline <a class="adm-link" href="tel:+917306868607">+91 73068 68607</a> or email <a class="adm-link" href="mailto:Info@sanicas.in">Info@sanicas.in</a>.</p>
         </div>
 
         <div class="prog-group">

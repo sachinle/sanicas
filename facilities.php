@@ -209,7 +209,7 @@ $achievements = [
             <div class="labwide__body">
                 <span class="tag tag--dark">Computer Lab</span>
                 <h3 class="fac-h3">State-of-the-art computing for every learner</h3>
-                <p class="fac-p">The college has three computer laboratories with high-tech desktops, laptops and computing systems (Green Environment systems), connected through a Local Area Network (LAN). The labs are consistently enhanced to align with the latest advancements and evolving industrial expectations, with advanced computing facilities for a variety of peripherals.</p>
+                <p class="fac-p">The college has three computer laboratories with high-tech desktops, laptops and computing systems ( Smart Computing Infrastructure), connected through a Local Area Network (LAN). The labs are consistently enhanced to align with the latest advancements and evolving industrial expectations, with advanced computing facilities for a variety of peripherals.</p>
                 <div class="labwide__stats">
                     <div><strong>03</strong><span>Computer labs</span></div>
                     <div><strong>LAN</strong><span>Connected systems</span></div>
@@ -299,7 +299,7 @@ $achievements = [
         </div>
 
         <div class="yoga reveal">
-            <div class="yoga__media"><img src="<?= fig('images (2)/infra and labs/infra_and_labs (2).jpeg') ?>" alt="Serene green surroundings at SANICAS" loading="lazy"></div>
+            <div class="yoga__media"><img src="<?= fig('yoga-hall.jpeg') ?>" alt="Students practicing yoga at SANICAS Yoga and Meditation Hall" loading="lazy"></div>
             <div class="yoga__body">
                 <?= eyebrow('Well-being', 'white') ?>
                 <h3 class="fac-h3">Yoga &amp; Meditation Hall</h3>
